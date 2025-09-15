@@ -1,0 +1,185 @@
+.navgen{
+    display: flex;
+     
+       transition: all 0.3s ease;
+}
+
+
+/* Collapsed state */
+.collapsed .menuside {
+    transform: translateX(-100%); /* moves sidebar completely out of view */
+    transition: transform 0.3s ease;
+}
+
+.collapsed .topnavside {
+    margin-left: 0; /* moves top nav to the left */
+    transition: margin-left 0.3s ease;
+}
+
+.topnavside.expanded {
+  width: 100%; 
+}
+
+
+
+
+
+
+/* LEFT MENU */
+
+.menuside{
+    display: flex;
+    flex-direction: column;
+    background-color:  #0c0e11;
+    color: #fefefe;
+    height: 100vw;
+    padding: 10px;
+    width: 19%;
+}
+
+.menuicnndtext{
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    padding: 20px;
+    gap: 12px;
+    position: relative;
+    bottom: 7px;
+
+}
+
+.menuicnndtext::after{
+    content: '';
+    background-color: #333333;
+    height: 1px;
+    width: 108%;
+    position: absolute;
+    margin-top: 90px;
+    transform: translateX(-30px);
+   
+    
+}
+
+.menuicnndtext h2{
+font-size: 20px;
+color: #d3d7de;
+font-family: system-ui;
+}
+
+
+.menuicnndtext p{
+font-size: 14px;
+color: #d3d7deb2;
+font-family: system-ui;
+}
+
+
+.hndp{
+    display: flex;
+    flex-direction: column;
+   
+
+}
+
+.trendicn{
+    background-color: #4251f0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+
+.topnavside{
+    display: flex;
+}
+
+
+
+
+
+.profilesection{
+    width: 40px;
+    height: 40px;
+}
+
+
+
+
+
+
+
+
+.wholemenu{
+    display: flex;
+    flex-direction: column;
+padding: 23px;
+gap: 13px;
+}
+
+.wholemenu h2{
+    font-size: 12px;
+    font-family: system-ui;
+    color: #d3d7de99;
+    font-weight: 500;
+}
+
+
+.theduras{
+    display: flex;
+   align-items: center;
+gap: 12px;
+font-size: 14px;
+    font-family: system-ui;
+    color: #d3d7de;
+    padding-bottom: 22px;
+    font-weight: 500;
+}
+
+.theduras:hover{
+    width: 100%;
+   color: #4251f0;
+    background-color: #fff;
+    padding-left: 5px;
+    border-radius: 8px;
+    height: max-content;
+    padding-bottom: 10px;
+    padding-top: 2px;
+}
+
+.wholemenu svg{
+    width: 16px;
+    height: 16px;
+}
+
+
+
+
+/* TOPSIDE NAV */
+
+.topnavside {
+display: flex;
+padding: 25px;
+gap: 10px;
+background-color: #e5e7eb;
+width: 81%;
+}
+
+.searchgen div{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+   background-color: #f3f4f680;
+   padding: 5px;
+   border-radius: 8px;
+}
+
+.searchgen input{
+    width: 300px;
+    outline: none;
+}
+
+.sidebaricn{
+   color: #6e7a91;
+font-weight: 700;
+}
