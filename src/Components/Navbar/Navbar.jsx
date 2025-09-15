@@ -12,6 +12,67 @@ import { MdOutlineDashboard } from "react-icons/md";
 import { FiUsers } from "react-icons/fi";
 import { FiFileText } from "react-icons/fi";
 import { GrAnalytics } from "react-icons/gr";
+import { FiUser } from "react-icons/fi";
+import { CiSettings } from "react-icons/ci";
+import { LuDollarSign } from "react-icons/lu";
+import { LuActivity } from "react-icons/lu";
+import { FiFilter } from "react-icons/fi";
+import { CiExport } from "react-icons/ci";
+import { IoMdAdd } from "react-icons/io";
+
+
+
+
+
+
+
+
+
+
+const boxarray = [
+    {
+        head: 'Total Revenue',
+        icon: <LuDollarSign />,
+        amount: '$67,429',
+        percent: '+12.5% from last month',
+        final: 'Revenue this month',
+    },
+
+    {
+        head: 'Active Users',
+        icon: <FiUsers />,
+        amount: '8,429',
+        percent: '+5.2% from last month',
+        final: 'Currently online',
+    },
+
+    {
+        head: 'Growth Rate',
+        icon: <IoMdTrendingUp />,
+        amount: '23.7%',
+        percent: '+2.1% from last month',
+        final: 'Monthly growth',
+    },
+
+    {
+        head: 'Conversion Rate',
+        icon: <LuActivity />,
+        amount: '3.2%',
+        percent: '-0.4% from last month',
+        final: 'Sales conversion',
+    },
+
+
+
+]
+
+
+
+
+
+
+
+
 
 
 
@@ -28,6 +89,10 @@ const Navbar = () => {
     const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
     const [activeMenu, setActiveMenu] = useState("Dashboard"); // default page
 
+    const [isNotificationsOpen, setIsNotificationsOpen] = useState(false); // ✅ added
+    const [isProfileOpen, setIsProfileOpen] = useState(false);
+
+
 
 
     const handleNotificationClick = () => {
@@ -36,39 +101,311 @@ const Navbar = () => {
 
 
 
-const [isNotificationsOpen, setIsNotificationsOpen] = useState(false);
+    const handleNotificationsToggle = () => {
+        setIsNotificationsOpen((prev) => {
+            if (!prev) setIsProfileOpen(false); // close profile if opening notifications
+            return !prev;
+        });
+    };
 
-const handleNotificationsToggle = () => {
-  setIsNotificationsOpen((prev) => !prev);
-};
 
+
+
+    const handleProfileToggle = () => {
+        setIsProfileOpen((prev) => {
+            if (!prev) setIsNotificationsOpen(false); // close notifications if opening profile
+            return !prev;
+        });
+    };
 
 
 
     const renderContent = () => {
         switch (activeMenu) {
 
-            
-            case "Dashboard":
-                return  (
-              <div className={styles.dashboardContent}>
-                <h2>📊 Dashboard Overview</h2>
-                <p>This is where your dashboard widgets, charts, or summaries will go.</p>
 
-                <p>{Array(200).fill("This is a scroll test sentence. ").join(" ")}</p>
-              </div>
-            );
+            case "Dashboard":
+                return (
+                    <div className={styles.dashboardgen}>
+                        <h2 className={`${styles.dash}`}> Dashboard Overview</h2>
+                        <p className={`${styles.welcome}`}>Welcome back! Here's what's happening with your business today.</p>
+
+
+
+                        <div className={`${styles.mappingboxgen}`}>
+
+                            {boxarray.map((each, index) =>
+                                <div key={index} className={`${styles.eachbox}`}>
+
+                                    <div className={`${styles.headndicon}`}>
+
+                                        <div className={styles.head}> {each.head} </div>
+                                        <div className={styles.icon}> {each.icon} </div>
+
+                                    </div>
+
+
+                                    <div className={`${styles.apf}`}>
+
+
+                                        <h2 className={styles.amount}> {each.amount} </h2>
+
+                                        <h3 className={`${styles.percent} ${each.percent === "-0.4% from last month" ? styles.specialpercent : ""}`}> {each.percent} </h3>
+
+                                        <h4 className={`${styles.final}`}> {each.final}</h4>
+                                    </div>
+
+
+
+
+                                </div>
+
+                            )}
+
+
+                        </div>
+
+
+                        {/* REVENUE AND USER */}
+
+                        <div className={`${styles.revnduser}`}>
+
+
+                            <div className={`${styles.revtrendgen}`}>
+
+                                <div className={styles.icnndrev}>
+                                    <div className={styles.trendicnn}><IoMdTrendingUp /></div>
+                                    <h2>Revenue Trend</h2>
+
+                                </div>
+
+                                <p className={styles.monthly}>Monthly revenue over the last 6 months</p>
+                            </div>
+
+
+
+                            <div className={`${styles.usergen}`}>
+
+                                <div className={styles.icnnduser}>
+                                    <div className={styles.usersicn}><FiUsers /></div>
+                                    <h2>User Analytics</h2>
+                                </div>
+
+                                <p className={styles.useracq}>User acquisition over time</p>
+
+                            </div>
+
+
+
+
+
+                        </div>
+
+                        {/* DEVICE AND RECENT */}
+
+                        <div className={styles.devicendrec}>
+
+
+                            <div className={styles.devicegen}>
+
+                                <h2>Device Usage</h2>
+                                <p>Traffic by device type</p>
+                            </div>
+
+
+
+
+                            <div className={styles.recentgen}>
+
+                                <div className={styles.icnndrecent}>
+                                    <div><LuActivity /></div>
+                                    <h2>Recent Activity</h2>
+                                </div>
+
+                                <p className={styles.late}>Latest user actions and system events</p>
+
+
+                                <div className={styles.allgroups}>
+
+
+                                    <div className={styles.group}>
+
+                                        <div className={styles.first3}>
+                                            <div className={styles.rounddot1}> {''}</div>
+
+                                            <div className={styles.namendact}>
+                                                <h4>John Doe</h4>
+                                                <p>Signed up</p>
+                                            </div>
+
+
+                                        </div>
+
+
+                                        <p className={styles.timme}>2 minutes ago</p>
+
+
+                                    </div>
+
+
+                                    <div className={styles.group}>
+
+                                        <div className={styles.first3}>
+                                            <div className={styles.rounddot2}> {''}</div>
+
+                                            <div className={styles.namendact}>
+                                                <h4>
+                                                    Jane Smith</h4>
+                                                <p>Made a purchase</p>
+                                            </div>
+
+
+                                        </div>
+
+
+                                        <p className={styles.timme}>5 minutes ago</p>
+
+
+                                    </div>
+
+                                    <div className={styles.group}>
+
+                                        <div className={styles.first3}>
+                                            <div className={styles.rounddot3}> {''}</div>
+
+                                            <div className={styles.namendact}>
+                                                <h4>
+                                                    System</h4>
+                                                <p>Backup completed</p>
+                                            </div>
+
+
+                                        </div>
+
+
+                                        <p className={styles.timme}>1 hour ago</p>
+
+
+                                    </div>
+
+
+                                    <div className={styles.group}>
+
+                                        <div className={styles.first3}>
+                                            <div className={styles.rounddot4}> {''}</div>
+
+                                            <div className={styles.namendact}>
+                                                <h4>
+
+                                                    Bob Johnson</h4>
+                                                <p>Updated profile</p>
+                                            </div>
+
+
+                                        </div>
+
+
+                                        <p className={styles.timme}>2 hours ago</p>
+
+
+                                    </div>
+
+
+                                    <div className={styles.group}>
+
+                                        <div className={styles.first3}>
+                                            <div className={styles.rounddot5}> {''}</div>
+
+                                            <div className={styles.namendact}>
+                                                <h4>
+
+                                                    Alice Brown</h4>
+                                                <p>Left a review</p>
+                                            </div>
+
+
+                                        </div>
+
+
+                                        <p className={styles.timme}>23 hours ago</p>
+
+
+                                    </div>
+
+
+
+
+
+                                </div>
+                            </div>
+
+
+
+                        </div>
+
+                    </div>
+                );
 
 
 
 
             case "Users":
                 return (
-                
-           <div>
-                             <p>{Array(200).fill("This is a scroll test sentence. ").join(" ")}</p>
 
-           </div>
+                    <div className={`${styles.usersgen}`}>
+
+
+                        <div className={`${styles.fitstpart}`}>
+
+                            <h2 className={`${styles.umanage}`}>User Management</h2>
+                            <p className={`${styles.manage}`}>Manage and monitor all users in your system</p>
+
+
+                            <div className={`${styles.searchndfilter}`}>
+
+                                <div className={`${styles.searchgen2}`}>
+
+                                    <div><FiSearch /></div>
+                                    <input type="text" placeholder='Search users...' />
+                                </div>
+
+
+                                <div className={styles.fea}>
+
+                                    <div className={styles.filter}>
+
+                                        <div><FiFilter /></div>
+                                        <p>Filter</p>
+
+                                    </div>
+
+
+
+                                    <div className={styles.export}>
+
+                                        <div><CiExport />
+                                        </div>
+                                        <p>Export</p>
+
+                                    </div>
+
+
+                                    <div className={styles.add}>
+                                        <div><IoMdAdd />
+                                        </div>
+                                        <p>Add</p>
+                                    </div>
+
+                                </div>
+
+
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
 
                 );
 
@@ -77,9 +414,9 @@ const handleNotificationsToggle = () => {
 
             case "Reports":
                 return (
-                    
+
                     <div>
-                         <h2>📑 Reports Section</h2>
+                        <h2>📑 Reports Section</h2>
                     </div>
 
 
@@ -90,20 +427,20 @@ const handleNotificationsToggle = () => {
 
             case "Analytics":
                 return (
-                
-              <div>
-                  <h2>📈 Analytics Data</h2>
-              </div>
+
+                    <div>
+                        <h2>📈 Analytics Data</h2>
+                    </div>
 
                 );
 
 
             default:
-                return ( 
-                <div className={`${styles.genContent}`}>
-                    <h2>Welcome</h2>;
+                return (
+                    <div className={`${styles.genContent}`}>
+                        <h2>Welcome</h2>;
 
-                </div>
+                    </div>
 
                 );
         }
@@ -133,32 +470,28 @@ const handleNotificationsToggle = () => {
 
                     <div className={`${styles.dura}`}>
 
-                        <div className={`${styles.theduras}  ${
-    activeMenu === "Dashboard" ? styles.activeMenu : ""
-  }`} onClick={() => setActiveMenu("Dashboard")}>
+                        <div className={`${styles.theduras}  ${activeMenu === "Dashboard" ? styles.activeMenu : ""
+                            }`} onClick={() => setActiveMenu("Dashboard")}>
                             <div><MdOutlineDashboard /></div>
                             <p>Dashboard</p>
                         </div>
 
-                        <div className={`${styles.theduras} ${
-    activeMenu === "Users" ? styles.activeMenu : ""
-  }`} onClick={() => setActiveMenu("Users")}>
+                        <div className={`${styles.theduras} ${activeMenu === "Users" ? styles.activeMenu : ""
+                            }`} onClick={() => setActiveMenu("Users")}>
                             <div> <FiUsers /></div>
                             <p>Users</p>
                         </div>
 
 
-                        <div className={`${styles.theduras} ${
-    activeMenu === "Reports" ? styles.activeMenu : ""
-  }`} onClick={() => setActiveMenu("Reports")}>
+                        <div className={`${styles.theduras} ${activeMenu === "Reports" ? styles.activeMenu : ""
+                            }`} onClick={() => setActiveMenu("Reports")}>
                             <div><FiFileText /></div>
                             <p>Reports</p>
                         </div>
 
 
-                        <div className={`${styles.theduras} ${
-    activeMenu === "Analytics" ? styles.activeMenu : ""
-  }`} onClick={() => setActiveMenu("Analytics")}>
+                        <div className={`${styles.theduras} ${activeMenu === "Analytics" ? styles.activeMenu : ""
+                            }`} onClick={() => setActiveMenu("Analytics")}>
                             <div><GrAnalytics /></div>
                             <p>Analytics</p>
                         </div>
@@ -193,24 +526,38 @@ const handleNotificationsToggle = () => {
 
                     <div className={`${styles.notifygen}`}>
 
-                        <div className={`${styles.notifyicn}`}  onClick={handleNotificationsToggle}><IoMdNotificationsOutline /></div>
+                        <div className={`${styles.notifyicn}`} onClick={handleNotificationsToggle}><IoMdNotificationsOutline /></div>
                         <span className="badge">3</span>
 
 
-                          {isNotificationsOpen && (
-    <div className={styles.notificationDropdown}>
-      <p>🔔 You have new notifications</p>
-      <p>• User John signed up</p>
-      <p>• Report #123 was generated</p>
-      <p>• System update available</p>
-    </div>
-  )}
+                        {isNotificationsOpen && (
+                            <div className={styles.notificationDropdown}>
+                                <div><h3 className={`${styles.noti}`}>🔔 Notifications</h3></div>
+
+                                <div className={styles.grpgen}>
+                                    <div className={`${styles.grp1}`}>
+                                        <h3>• New user Registered</h3>
+                                        <p>John Doe joined 5mins ago</p>
+                                    </div>
+
+                                    <div className={`${styles.grp2}`}>
+                                        <h3>• System Maintenance</h3>
+                                        <p>Scheduled for tonight at 2:00 AM</p>
+                                    </div>
+
+                                    <div className={`${styles.grp3}`}>
+                                        <h3>• Report generated</h3>
+                                        <p>Monthly analytics report is ready</p>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
 
                     </div>
 
 
 
-                    <div className={`${styles.profilesection}`}>
+                    <div className={`${styles.profilesection}`} onClick={handleProfileToggle}>
 
                         <Image className={styles.prof}
 
@@ -218,6 +565,30 @@ const handleNotificationsToggle = () => {
                             alt='proile_pic' />
                     </div>
 
+                    {isProfileOpen && (
+                        <div className={styles.profileDropdown}>
+
+                            <div className={`${styles.adminpart}`}>
+                                <p>Admin User</p>
+                                <h3>admin@nimbusadmin.com</h3>
+                            </div>
+
+                            <div className={`${styles.profndset}`}>
+                                <div className={`${styles.profndicn}`}>
+                                    <div> <FiUser /> </div>
+                                    <p>Profile</p>
+                                </div>
+
+                                <div className={`${styles.setndicn}`}>
+                                    <div><CiSettings /></div>
+                                    <p>Settings</p>
+                                </div>
+                            </div>
+
+                            <p className={`${styles.logout}`}>Log out</p>
+
+                        </div>
+                    )}
 
 
                 </div>
