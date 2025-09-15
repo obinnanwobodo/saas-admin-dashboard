@@ -17,8 +17,10 @@ import { CiSettings } from "react-icons/ci";
 import { LuDollarSign } from "react-icons/lu";
 import { LuActivity } from "react-icons/lu";
 import { FiFilter } from "react-icons/fi";
-import { CiExport } from "react-icons/ci";
 import { IoMdAdd } from "react-icons/io";
+import { PiExport } from "react-icons/pi";
+import { HiDotsHorizontal } from "react-icons/hi";
+
 
 
 
@@ -383,7 +385,8 @@ const Navbar = () => {
 
                                     <div className={styles.export}>
 
-                                        <div><CiExport />
+                                        <div><PiExport />
+
                                         </div>
                                         <p>Export</p>
 
@@ -404,6 +407,53 @@ const Navbar = () => {
 
                         </div>
 
+
+
+
+                        <div className={`${styles.secondpart}`}>
+
+                            <h2 className={styles.alluse}>All Users</h2>
+                            <p className={styles.alist}>A list of all users including their name, email, role, and status.</p>
+
+
+                            <div className={styles.tablegen}>
+
+                                <div className={styles.firstline}>
+
+                                    <h2>User</h2>
+                                    <h4>Role</h4>
+                                    <h4>Status</h4>
+                                    <p>	Join Date</p>
+                                    <p>Last Login</p>
+                                    <h3>Actions</h3>
+
+                                </div>
+
+
+                                <div className={styles.secondline}>
+
+                                    <div className={styles.first3}>
+                                        <div className={styles.userimg}></div>
+
+                                        <div>
+                                            <h2>John Doe</h2>
+                                            <p>john.doe@example.com</p>
+                                        </div>
+
+                                    </div>
+
+                                    <h4>Admin</h4>
+                                    <h4>Active</h4>
+                                    <p>15/01/2024</p>
+                                    <p>2 hours ago</p>
+                                    <div><HiDotsHorizontal /></div>
+                                </div>
+
+                            </div>
+
+
+
+                        </div>
 
                     </div>
 

@@ -832,6 +832,7 @@ padding: 10px;
 border: 1px solid #4251f0;
 width: 400px;
 border-radius: 10px;
+
 }
 
 .searchgen2 input{
@@ -844,14 +845,101 @@ outline: none;
     gap: 40px;
 }
 
+.fea svg{
+    color: #21242c;
+    width: 20px;
+height: 20px;
+}
+
 .filter{
     display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-family: system-ui;
+color: #21242c;
+background-color: #f8f7fc;
+gap: 10px;
+border-radius: 10px;
+width: 100px;
+font-weight: 500;
+cursor: pointer;
+    
 }
 
 .export{
     display: flex;
+    justify-content: center;
+    align-items: center;
+      font-size: 14px;
+    font-family: system-ui;
+color: #21242c;
+background-color: #f8f7fc;
+border-radius: 10px;
+width: 100px;
+font-weight: 500;
+gap: 10px;
+cursor: pointer;
+
 }
 
 .add{
     display: flex;
+    justify-content: center;
+    align-items: center;
+      font-size: 14px;
+    font-family: system-ui;
+color: #ffffff;
+background-color: #4251f0;
+border-radius: 10px;
+width: 100px;
+font-weight: 500;
+gap: 10px;
+cursor: pointer;
+
+}
+
+
+
+/* SECOND PART TABLE  */
+
+.secondpart{
+margin-top: 30px;
+}
+
+
+.alluse {
+font-size: 23px;
+color: #21242c;
+font-weight: 500;
+    font-family: system-ui;
+
+}
+
+.alist {
+font-size: 14px;
+color: #6e7a91;
+    font-family: system-ui;
+
+}
+
+
+.tablegen{
+margin-top: 30px;
+}
+
+.firstline{
+    display: flex;
+    font-size: 14px;
+    color: #6e7a91;
+    font-family: system-ui;
+    font-weight: 500;
+    justify-content: space-between;
+}
+
+.userimg{
+    background-color: #333333;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
 }
