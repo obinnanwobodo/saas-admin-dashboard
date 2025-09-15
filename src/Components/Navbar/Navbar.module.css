@@ -16,8 +16,13 @@
     transition: margin-left 0.3s ease;
 }
 
-.topnavside.expanded {
-  width: 100%; 
+.topnavndcontent.expanded {
+
+  display: flex;
+  justify-content: flex-start;  
+  position: relative;
+ right: 255px;
+ 
 }
 
 
@@ -28,13 +33,17 @@
 /* LEFT MENU */
 
 .menuside{
-    display: flex;
+   display: flex;
     flex-direction: column;
-    background-color:  #0c0e11;
+    background-color: #0c0e11;
     color: #fefefe;
-    height: 100vw;
+    height: 100vh;            /* full height of screen */
     padding: 10px;
     width: 19%;
+    position: fixed;          /* stays fixed */
+    top: 0;
+    left: 0;
+    z-index: 1100;      
 }
 
 .menuicnndtext{
@@ -126,24 +135,26 @@ gap: 13px;
 
 .theduras{
     display: flex;
-   align-items: center;
-gap: 12px;
-font-size: 14px;
-    font-family: system-ui;
-    color: #d3d7de;
-    padding-bottom: 22px;
-    font-weight: 500;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  font-family: system-ui;
+  color: #d3d7de;
+  font-weight: 500;
+
+  padding: 10px 5px;     /* FIXED padding (top/bottom, left/right) */
+  border-radius: 8px;
 }
 
 .theduras:hover{
     width: 100%;
-   color: #4251f0;
-    background-color: #fff;
+   color: #fefefe;
+    background-color: #333333;
     padding-left: 5px;
     border-radius: 8px;
     height: max-content;
-    padding-bottom: 10px;
-    padding-top: 2px;
+    
+
 }
 
 .wholemenu svg{
@@ -153,15 +164,80 @@ font-size: 14px;
 
 
 
+.genContent{
+    display: flex;
+  flex-direction: column;
+  padding: 20px;
+
+  margin-left: 19%;
+  margin-top: 0;                /* ✅ remove margin-top */
+  width: calc(100% - 19%);
+  height: 100vh;                /* ✅ allow full viewport height */
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  padding-top: 80px;
+  background: #e5e7eb;
+  position: relative;           /* ✅ ensures it scrolls under navbar */
+  z-index: 1;                   /* lower than navbar */
+}
+
+
+.activeMenu {
+    display: flex;
+  color:  #4251f0;             /* blue text */
+  background-color: #ffffff;  /* white background */
+  border-radius: 8px;
+  padding-left: 5px;
+  padding-top: 2px;
+  padding-bottom: 10px;
+  font-weight: 600;           /* bolder look */
+   gap: 12px; 
+}
+
+
+.dura{
+    
+}
+
+
+
+
+
+
+
 
 /* TOPSIDE NAV */
 
+.topnavndcontent{
+display: flex;
+flex-direction: column;
+width: 100%;
+
+}
+
+
 .topnavside {
 display: flex;
-padding: 25px;
-gap: 10px;
-background-color: #e5e7eb;
-width: 81%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  width: calc(100% - 19%);
+  height: 62px;  
+
+     background: rgba(255, 255, 255, 0.08);  
+  backdrop-filter: blur(12px);          /* ✅ blur content beneath */
+  -webkit-backdrop-filter: blur(12px);
+
+  position: fixed;
+  top: 0;
+  left: 19%;
+  z-index: 1200;
+  gap: 20px;
+  padding: 0 20px;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .searchgen div{
@@ -175,11 +251,93 @@ width: 81%;
 }
 
 .searchgen input{
-    width: 300px;
+    width: 495px;
     outline: none;
 }
 
-.sidebaricn{
+.sidebaricn{ 
+    display: flex;
+    margin-left: 20px;
    color: #6e7a91;
 font-weight: 700;
+ padding: 10px;          /* set the padding here */
+  border-radius: 8px; 
 }
+
+.sidebaricn svg {
+  color: #6e7a91;
+}
+
+.sidebaricn:hover{
+        background-color: #4251f01a;
+      color: #6e7a91 ; 
+}
+
+
+.notifygen {
+      position: relative; 
+}
+
+.notifygen span{
+    display: flex;
+    background-color: red;
+    position: relative;
+    bottom: 33px;
+    left: 17px;
+    border-radius: 50%;
+    width: 15px;
+    height: 20px;
+    justify-content: center;
+}
+
+.notifygen svg{
+    display: flex;
+    position: relative;
+    width: 20px;
+    height: 20px;
+}
+
+.notifyicn{
+ padding: 10px;
+        border-radius: 8px;
+        position: relative;
+    top: 10px;
+
+}
+
+.notifyicn:hover{
+    background-color: #4251f01a;
+        color: #0c0e11;
+        justify-content: center;
+        align-items: center;
+       
+}
+
+
+.notificationDropdown{
+      position: absolute;
+  top: 40px;       /* distance below the bell */
+  right: 0;        /* align to right */
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+  width: 220px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    
+
+}
+
+
+
+
+
+
+.prof{
+    border-radius: 150%;
+}
+
+
+
+
+
