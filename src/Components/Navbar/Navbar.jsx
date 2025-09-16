@@ -21,12 +21,37 @@ import { IoMdAdd } from "react-icons/io";
 import { PiExport } from "react-icons/pi";
 import { HiDotsHorizontal } from "react-icons/hi";
 
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar } from 'recharts';
+
+import DeviceUsageChart from "../Charts/DeviceUsageChart";
 
 
 
 
 
 
+// Data for the line chart (Revenue Trend)
+const revenueData = [
+    { name: 'Jan', revenue: 42000 },
+    { name: 'Feb', revenue: 55000 },
+    { name: 'Mar', revenue: 52000 },
+    { name: 'Apr', revenue: 63000 },
+    { name: 'May', revenue: 58000 },
+    { name: 'Jun', revenue: 70000 },
+];
+
+
+
+
+// Data for the bar chart (User Analytics)
+const userData = [
+    { name: 'Jan', users: 2500 },
+    { name: 'Feb', users: 1500 },
+    { name: 'Mar', users: 10000 },
+    { name: 'Apr', users: 4000 },
+    { name: 'May', users: 5000 },
+    { name: 'Jun', users: 4500 },
+];
 
 
 
@@ -184,7 +209,7 @@ const Navbar = () => {
 
                                         <h3 className={`${styles.percent} ${each.percent === "-0.4% from last month" ? styles.specialpercent : ""}`}> {each.percent} </h3>
 
-                                        <h4 className={`${styles.final}`}> {each.final}</h4>
+                                        <p className={`${styles.final}`}> {each.final}</p>
                                     </div>
 
 
@@ -212,7 +237,29 @@ const Navbar = () => {
                                 </div>
 
                                 <p className={styles.monthly}>Monthly revenue over the last 6 months</p>
+
+                                {/* LINE CHART */}
+                                <div style={{ width: '100%', height: 300 }}>
+                                    <ResponsiveContainer width="100%" height="100%">
+                                        <LineChart
+                                            width={500}
+                                            height={300}
+                                            data={revenueData}
+                                            margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+                                        >
+                                            <CartesianGrid strokeDasharray="3 3" vertical={false} />
+                                            <XAxis dataKey="name" />
+                                            <YAxis />
+                                            <Tooltip />
+                                            <Line type="monotone" dataKey="revenue" stroke="#4251f0" strokeWidth={2} dot={{ r: 4 }} activeDot={{ r: 6 }} />
+                                        </LineChart>
+                                    </ResponsiveContainer>
+                                </div>
+                                {/* END LINE CHART */}
                             </div>
+
+
+
 
 
 
@@ -225,6 +272,24 @@ const Navbar = () => {
 
                                 <p className={styles.useracq}>User acquisition over time</p>
 
+                                {/* BAR CHART */}
+                                <div style={{ width: '100%', height: 300 }}>
+                                    <ResponsiveContainer width="100%" height="100%">
+                                        <BarChart
+                                            width={500}
+                                            height={300}
+                                            data={userData}
+                                            margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+                                        >
+                                            <CartesianGrid strokeDasharray="3 3" vertical={false} />
+                                            <XAxis dataKey="name" />
+                                            <YAxis />
+                                            <Tooltip />
+                                            <Bar dataKey="users" fill="#4251f0" barSize={30} />
+                                        </BarChart>
+                                    </ResponsiveContainer>
+                                </div>
+                                {/* END BAR CHART */}
                             </div>
 
 
@@ -242,6 +307,30 @@ const Navbar = () => {
 
                                 <h2>Device Usage</h2>
                                 <p>Traffic by device type</p>
+
+                                <div> <DeviceUsageChart /></div>
+
+
+                                 <div className={styles.genperc}>
+                                    <div className={styles.percgrp1}>
+                                        <h6 className={styles.mbl}>Mobile</h6>
+                                        <h6 className={styles.six8}>68%</h6>
+                                    </div>
+
+                                    <div className={styles.percgrp2}>
+                                        <h4 className={styles.dstop}>Desktop</h4>
+                                        <p className={styles.two2}>22%</p>
+                                    </div>
+
+                                    <div className={styles.percgrp3}>
+                                        <h4 className={styles.tblt}>Tablet</h4>
+                                        <p className={styles.ten}>10%</p>
+                                    </div>
+
+
+
+                                </div>
+                            
                             </div>
 
 
@@ -595,7 +684,7 @@ const Navbar = () => {
                                 <div key={index} className={`${styles.eachofthem}`}>
 
                                     <div className={styles.boxcontent} >
-                                        
+
                                         <div className={styles.userr}>
                                             {each.user}
                                         </div>

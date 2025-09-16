@@ -226,7 +226,7 @@ display: flex;
   height: 62px;  
 
      background: rgba(255, 255, 255, 0.08);  
-  backdrop-filter: blur(12px);          /* ✅ blur content beneath */
+  backdrop-filter: blur(12px);         
   -webkit-backdrop-filter: blur(12px);
 
   position: fixed;
@@ -556,11 +556,12 @@ gap: 7px;
 .revtrendgen{
 background-color: #fefefe;
 width: 500px;
-height: 400px;
 box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08), 0 3px 5px rgba(0, 0, 0, 0.05);
 border-radius: 10px;
 margin-right: 3px;
 padding: 10px;
+padding-bottom: 20px;
+
 }
 
 
@@ -581,6 +582,7 @@ gap: 10px;
     font-size: 14px;
     color: #6e7a91;
     font-family: system-ui;
+    padding-bottom: 30px;
 }
 
 
@@ -599,10 +601,10 @@ gap: 10px;
 .usergen{
 background-color: #fefefe;
 width: 500px;
-height: 400px;
 margin-right: 16px;
 box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08), 0 3px 5px rgba(0, 0, 0, 0.05);
 border-radius: 10px;
+padding-bottom: 20px;
 padding: 10px;
 
 }
@@ -630,6 +632,8 @@ gap: 10px;
     font-size: 14px;
     color: #6e7a91;
     font-family: system-ui;  
+    padding-bottom: 30px;
+
 }
 
 
@@ -663,6 +667,67 @@ padding: 10px;
     font-family: system-ui; 
 
 }
+
+
+.chartContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;        /* White card background */
+  border-radius: 12px;        /* Rounded corners */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+  padding: 20px;
+  margin: 20px 0;
+  height: 320px;              /* Fixed card height */
+}
+
+.chartTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.chartWrapper {
+  width: 100%;
+  height: 250px;  /* Matches ResponsiveContainer height */
+}
+
+
+
+.genperc{
+
+}
+
+
+.percgrp1, .percgrp2, .percgrp3{
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 5px;
+padding-right: 5px;
+padding-left: 5px;
+}
+
+
+.mbl, .dstop, .tblt{
+font-size: 14px;
+color: #21242c;
+font-family: system-ui;
+font-weight: 500;
+}
+
+.six8, .two2, .ten{
+font-size: 14px;
+color: #21242c;
+font-family: system-ui;
+font-weight: 500;
+}
+
+
+
 
 
 
@@ -956,6 +1021,10 @@ margin-top: 30px;
       box-shadow: 0 1px 0 rgba(220, 220, 220, 0.9);
       padding-bottom: 10px;
 
+}
+
+.secondline:hover{
+    background-color: rgb(236, 236, 239);
 }
 
 .userimg{
