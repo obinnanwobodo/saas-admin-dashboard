@@ -69,7 +69,37 @@ const boxarray = [
 ]
 
 
+const ndarray = [
 
+    {
+        user: 'Total Users',
+        number: 5,
+        details: '+2 from last week',
+
+    },
+
+    {
+        user: 'Active Users',
+        number: 3,
+        details: '85% of total users',
+
+    },
+
+    {
+        user: 'Pending Users',
+        number: 1,
+        details: 'Awaiting verification',
+
+    },
+
+    {
+        user: 'Admins',
+        number: 1,
+        details: 'System administrators',
+
+    },
+
+]
 
 
 
@@ -420,12 +450,16 @@ const Navbar = () => {
 
                                 <div className={styles.firstline}>
 
-                                    <h2>User</h2>
-                                    <h4>Role</h4>
-                                    <h4>Status</h4>
-                                    <p>	Join Date</p>
-                                    <p>Last Login</p>
-                                    <h3>Actions</h3>
+                                    <h2 className={styles.us}>User</h2>
+
+                                    <div className={styles.middlege}>
+                                        <h4 className={styles.role}>Role</h4>
+                                        <h4 className={styles.sts}>Status</h4>
+                                        <p className={styles.jd}>	Join Date</p>
+                                        <p className={styles.ll}>Last Login</p>
+                                    </div>
+
+                                    <h3 className={styles.acti}>Actions</h3>
 
                                 </div>
 
@@ -436,17 +470,115 @@ const Navbar = () => {
                                         <div className={styles.userimg}></div>
 
                                         <div>
-                                            <h2>John Doe</h2>
-                                            <p>john.doe@example.com</p>
+                                            <h2 className={styles.jon}>John Doe</h2>
+                                            <p className={styles.jonemail}>john.doe@example.com</p>
                                         </div>
 
                                     </div>
 
-                                    <h4>Admin</h4>
-                                    <h4>Active</h4>
-                                    <p>15/01/2024</p>
-                                    <p>2 hours ago</p>
-                                    <div><HiDotsHorizontal /></div>
+                                    <div className={styles.middlele2}>
+                                        <h4 className={styles.adm}>Admin</h4>
+                                        <h4 className={styles.accti}>Active</h4>
+                                        <p className={styles.datee}>15/01/2025</p>
+                                        <p className={styles.timeo}>2 hours ago</p>
+                                    </div>
+
+                                    <div className={styles.dlstdot}><HiDotsHorizontal /></div>
+                                </div>
+
+
+                                {/* <NO></NO>2 */}
+                                <div className={styles.secondline}>
+
+                                    <div className={styles.first3}>
+                                        <div className={styles.userimg}></div>
+
+                                        <div>
+                                            <h2 className={styles.jon}>Jane Smith</h2>
+                                            <p className={styles.jonemail}>jane....smith@example.com</p>
+                                        </div>
+
+                                    </div>
+
+                                    <div className={styles.middlele2}>
+                                        <h4 className={styles.adm}>User</h4>
+                                        <h4 className={styles.accti}>Active</h4>
+                                        <p className={styles.datee}>20/02/2025</p>
+                                        <p className={styles.timeo}>2 days ago</p>
+                                    </div>
+
+                                    <div className={styles.dlstdot}><HiDotsHorizontal /></div>
+                                </div>
+
+                                {/* NO3 */}
+                                <div className={styles.secondline}>
+
+                                    <div className={styles.first3}>
+                                        <div className={styles.userimg}></div>
+
+                                        <div>
+                                            <h2 className={styles.jon}>Bob Johnson</h2>
+                                            <p className={styles.jonemail}>hnson@example.com</p>
+                                        </div>
+
+                                    </div>
+
+                                    <div className={styles.middlele2}>
+                                        <h4 className={styles.admi}>Manager</h4>
+                                        <h4 className={styles.acctii}>Inactive</h4>
+                                        <p className={styles.datee}>10/01/2025</p>
+                                        <p className={styles.timeo}>1 week ago</p>
+                                    </div>
+
+                                    <div className={styles.dlstdot}><HiDotsHorizontal /></div>
+                                </div>
+
+
+                                {/* NO4 */}
+                                <div className={styles.secondline}>
+
+                                    <div className={styles.first3}>
+                                        <div className={styles.userimg}></div>
+
+                                        <div>
+                                            <h2 className={styles.jon}>Alice Brown</h2>
+                                            <p className={styles.jonemail}>aliccce.brown@example.com</p>
+                                        </div>
+
+                                    </div>
+
+                                    <div className={styles.middlele2}>
+                                        <h4 className={styles.adm}>User</h4>
+                                        <h4 className={styles.accti}>Active</h4>
+                                        <p className={styles.datee}>05/03/2025</p>
+                                        <p className={styles.timeo}>5 minutes ago</p>
+                                    </div>
+
+                                    <div className={styles.dlstdot}><HiDotsHorizontal /></div>
+                                </div>
+
+
+                                {/* NO5 */}
+                                <div className={styles.secondline}>
+
+                                    <div className={styles.first3}>
+                                        <div className={styles.userimg}></div>
+
+                                        <div>
+                                            <h2 className={styles.jon}>Charlie Wilson</h2>
+                                            <p className={styles.jonemail}>ch.wilson@example.com</p>
+                                        </div>
+
+                                    </div>
+
+                                    <div className={styles.middlele2}>
+                                        <h4 className={styles.adm}>User</h4>
+                                        <h4 className={styles.accti}>Pending</h4>
+                                        <p className={styles.datee}>15/03/2024</p>
+                                        <p className={styles.timeo}>Never</p>
+                                    </div>
+
+                                    <div className={styles.dlstdot}><HiDotsHorizontal /></div>
                                 </div>
 
                             </div>
@@ -455,6 +587,36 @@ const Navbar = () => {
 
                         </div>
 
+                        {/* THIRD PART */}
+
+                        <div className={`${styles.thirdpart}`}>
+                            {ndarray.map((each, index) =>
+
+                                <div key={index} className={`${styles.eachofthem}`}>
+
+                                    <div className={styles.boxcontent} >
+                                        
+                                        <div className={styles.userr}>
+                                            {each.user}
+                                        </div>
+
+                                        <div className={styles.numberr}>
+                                            {each.number}
+                                        </div>
+
+
+                                        <div className={styles.detailss}>
+                                            {each.details}
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            )}
+
+
+
+                        </div>
                     </div>
 
                 );

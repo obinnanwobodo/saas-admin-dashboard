@@ -904,8 +904,16 @@ cursor: pointer;
 /* SECOND PART TABLE  */
 
 .secondpart{
+    display: flex;
+    flex-direction: column;
+    background-color: #fefefe;
 margin-top: 30px;
+padding: 30px;
+border-radius: 10px;
+padding-bottom: 50px;
 }
+
+
 
 
 .alluse {
@@ -935,6 +943,19 @@ margin-top: 30px;
     font-family: system-ui;
     font-weight: 500;
     justify-content: space-between;
+      box-shadow: 0 1px 0 rgba(220, 220, 220, 0.9);
+      padding-bottom: 10px;
+}
+
+
+.secondline{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+      box-shadow: 0 1px 0 rgba(220, 220, 220, 0.9);
+      padding-bottom: 10px;
+
 }
 
 .userimg{
@@ -942,4 +963,142 @@ margin-top: 30px;
     height: 30px;
     width: 30px;
     border-radius: 50%;
+}
+
+
+.jon{
+ 
+    font-size: 14px;
+    color: #21242c;
+    font-family: system-ui;
+    font-weight: 500;
+
+}
+
+.jonemail{
+
+  display: flex;
+    font-size: 14px;
+    color: #6e7a91;
+    font-family: system-ui;
+
+}
+
+    .adm, .accti, .datee{
+  font-size: 12px;
+    font-family: system-ui;
+color: #21242c;
+}
+
+ .datee, .timeo, .dlstdot{
+    font-size: 12px;
+    font-family: system-ui;
+color: #6e7a91;
+}
+
+.adm{
+    position: relative;
+right: 72px;
+}
+
+.admi{
+    position: relative;
+right: 50px;
+font-size: 12px;
+    font-family: system-ui;
+}
+
+.acctii{
+ position: relative;
+right: 85px;
+font-size: 12px;
+    font-family: system-ui;
+    color: #21242c;
+}
+
+.accti{
+    position: relative;
+right: 93px;
+color: #21242c;
+}
+
+.datee{
+     position: relative;
+right: 112px;
+}
+
+.timeo{
+     position: relative;
+right: 133px;
+}
+
+.middlege{
+display: flex;
+justify-content: space-between;
+gap: 100px;
+margin-left: 30px;
+}
+
+
+.middlele2{
+display: flex;
+justify-content: space-between;
+gap: 120px;
+margin-left: 40px;
+
+}
+
+.dlstdot{
+    position: relative;
+    right: 18px;
+}
+
+
+
+
+
+
+/* THIDG PART MAPPING */
+
+
+.thirdpart{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+margin-top: 20px;
+
+}
+
+.eachofthem{
+    background-color: #fefefe;
+    padding: 15px;
+    border-radius: 10px;
+    width: 245px;
+    height: 130px;
+}
+
+.boxcontent{
+padding-top: 20px;
+padding-left: 10px;
+}
+
+.userr{
+font-size: 14px;
+color: #21242c;
+font-family: system-ui;
+font-weight: 500;
+}
+
+.numberr{
+font-size: 24px;
+color: #21242c;
+font-family: system-ui;
+font-weight: 700;
+}
+
+.detailss{
+font-size: 12px;
+color: #6e7a91;
+font-family: system-ui;
+
 }
