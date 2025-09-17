@@ -557,6 +557,10 @@ padding: 1px;
     width: 55%;
   }
 
+  .profndset svg{
+    color: #21242c;
+  }
+
   /* Sidebar for Mobile */
   .menuside {
     position: fixed;
@@ -661,7 +665,7 @@ padding: 1px;
     width: 100%;
     gap: 20px; /* Increase gap for better spacing */
     height: 60px;
-    background-color: rgba(255, 255, 255, 0.08); /* Updated background color */
+    background-color:  #e5e7eb; /* Updated background color */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
     z-index: 1200; /* Ensure it's on top of other content */
     transition: none;
@@ -707,6 +711,10 @@ margin-right: 30px;
 width: 30%;
    
   }
+
+  .profndset svg{
+    color: #21242c;
+  }
 }
 
 
@@ -716,4 +724,8 @@ width: 30%;
    .desktopToggle {
     display: none;
    }
+
+   .profndset svg{
+    color: #21242c;
+  }
 }

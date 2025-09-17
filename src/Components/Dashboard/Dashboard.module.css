@@ -249,6 +249,14 @@
         width: 100%;
         min-width: unset;
     }
+
+    .mbl{
+        margin-top: 15px;
+    }
+
+    .dstop{
+        margin-top: 12px;
+    }
 }
 
 
@@ -309,5 +317,13 @@
     .useracq,
     .late {
         font-size: 12px;
+    }
+
+    .mbl{
+        margin-top: 15px;
+    }
+
+    .dstop{
+        margin-top: 12px;
     }
 }
