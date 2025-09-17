@@ -297,6 +297,7 @@ font-weight: 700;
 
 .notifygen {
       position: relative; 
+      
 }
 
 .notifygen span{
@@ -316,6 +317,7 @@ font-weight: 700;
     position: relative;
     width: 20px;
     height: 20px;
+    color: #21242c;
 }
 
 .notifyicn{

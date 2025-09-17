@@ -169,6 +169,10 @@
     color: #21242c;
 }
 
+.six8, .two2, .ten{
+    color: #6e7a91;
+}
+
 /* Recent Activity specific styles */
 .allgroups {
     display: flex;
