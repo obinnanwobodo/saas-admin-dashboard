@@ -168,9 +168,9 @@ box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08), 0 3px 5px rgba(0, 0, 0, 0.05);
 }
 
 .cardValue {
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 700;
-    color: var(--text-primary-dark);
+    color: #21242c;
 }
 
 .trendIcon {
@@ -624,5 +624,83 @@ background-color: rgb(246, 246, 248);
   .widgetCard {
     width: calc(50% - 10px); /* Two widgets per row with a gap */
     min-width: unset;
+  }
+}
+
+
+
+
+/* FOR REPORTS LAST PART */
+
+@media (max-width: 400px) {
+  /* Main widget container */
+  .widgetLayout {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  /* Individual widget cards */
+  .widgetCard {
+    padding: 16px;
+    min-width: unset; /* Remove the minimum width constraint */
+  }
+
+  /* Widget header text */
+  .widgetTitle {
+    font-size: 1rem;
+    margin-bottom: 2px;
+  }
+
+  .widgetSubtitle {
+    font-size: 0.75rem;
+  }
+
+  /* Widget list items */
+  .widgetListItem {
+    flex-direction: column; /* Stack the elements vertically */
+    align-items: flex-start;
+    padding: 10px 0;
+    font-size: 0.875rem;
+  }
+
+  .listItemIcon {
+    margin-right: 8px;
+    font-size: 1rem;
+  }
+
+  /* Schedule details for stacked layout */
+  .scheduleDetails {
+    margin-left: 0;
+    margin-top: 5px;
+  }
+
+  .scheduleInfo {
+    font-size: 0.75rem;
+  }
+
+  /* Generate button */
+  .generateBtn {
+    width: 100%; /* Make it full-width */
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  /* Schedule status badges */
+  .scheduleStatus {
+    width: auto; /* Remove the full-width constraint */
+    text-align: center;
+    margin-top: 0; /* Remove top margin */
+    /* Add the following to make it flex in a row, if needed */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Action dots on scheduled reports */
+  .widgetListItem .HiDotsHorizontal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
   }
 }
