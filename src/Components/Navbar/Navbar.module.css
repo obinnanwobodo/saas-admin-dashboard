@@ -273,6 +273,7 @@ gap: 13px;
 .searchgen input{
     width: 300px;
     outline: none;
+    color: #21242c;
 }
 
 .sidebaricn{ 

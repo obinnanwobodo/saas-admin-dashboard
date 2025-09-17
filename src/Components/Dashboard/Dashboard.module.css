@@ -164,6 +164,11 @@
     padding-bottom: 25px;
 }
 
+
+.mbl, .tblt, .dstop{
+    color: #21242c;
+}
+
 /* Recent Activity specific styles */
 .allgroups {
     display: flex;
