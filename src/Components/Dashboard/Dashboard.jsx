@@ -61,9 +61,10 @@ const boxarray = [
     },
 ];
 
-const Dashboard = () => {
+const Dashboard =  ({ isSidebarCollapsed }) => { 
     return (
-        <div className={styles.dashboardgen}>
+            <div className={`${styles.dashboardgen} ${isSidebarCollapsed ? styles.dashboardExpanded : ''}`}>
+
             <h2 className={`${styles.dash}`}> Dashboard Overview</h2>
             <p className={`${styles.welcome}`}>Welcome back! Here's what's happening with your business today.</p>
 

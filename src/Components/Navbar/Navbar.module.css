@@ -411,7 +411,7 @@ border-radius: 8px;
     gap: 10px;
   position: absolute;
   top: 50px;       /* just under avatar */
-  right: 0;
+  
   margin-right: 280px;
   background: white;
   border: 1px solid #ddd;
@@ -471,7 +471,15 @@ padding: 1px;
 
 
 
+/* Sidebar when collapsed */
+.navgen.collapsed .menuside {
+    width: 0px; /* Reduced width for the sidebar */
+}
 
+/* Main content when sidebar is collapsed */
+.topnavndcontent.expanded {
+    width: 100%; /* Main content expands to fill the remaining space */
+}
 
 
 

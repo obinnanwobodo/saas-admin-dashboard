@@ -6,6 +6,11 @@ import { FaUsers, FaChartLine } from 'react-icons/fa';
 import { IoMdTrendingUp } from 'react-icons/io';
 import { MdAccessTime } from 'react-icons/md';
 import { BarChart, Bar, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import { BiTargetLock } from 'react-icons/bi';
+
+
+
+
 
 // Data for User Growth charts
 const userGrowthData = [
@@ -44,6 +49,19 @@ const productSalesData = [
     { name: 'May', 'Product A Sales': 10500, 'Product B Sales': 9200 },
     { name: 'Jun', 'Product A Sales': 12500, 'Product B Sales': 10000 },
 ];
+
+
+
+
+const retentionData = [
+    { name: 'Week 1', percentage: 100 },
+    { name: 'Week 2', percentage: 75 },
+    { name: 'Week 3', percentage: 65 },
+    { name: 'Week 4', percentage: 58 },
+    { name: 'Week 8', percentage: 45 },
+    { name: 'Week 12', percentage: 38 },
+];
+
 
 const AnalyticsDashboard = () => {
     const [activeTab, setActiveTab] = useState('User Growth');
@@ -93,7 +111,71 @@ const AnalyticsDashboard = () => {
                     </div>
                 );
             case 'Retention':
-                return <div className={styles.placeholder}>Retention analytics coming soon.</div>;
+                return (
+                
+
+                    <div className={styles.chartCard}>
+            <div className={styles.chartHeader}>
+                <span className={styles.chartIcon}>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <circle cx="12" cy="12" r="4"></circle>
+                    </svg>
+                </span>
+                <div className={styles.chartTitleGroup}>
+                    <h3 className={styles.chartTitle}>User Retention Analysis</h3>
+                    <p className={styles.chartSubtitle}>Percentage of users retained over time</p>
+                </div>
+            </div>
+            <div className={styles.chartContent}>
+                <ResponsiveContainer width="100%" height={300}>
+                    <LineChart
+                        data={retentionData}
+                        margin={{
+                            top: 5,
+                            right: 30,
+                            left: 20,
+                            bottom: 5,
+                        }}
+                    >
+                        <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e0e0e0" />
+                        <XAxis dataKey="name" axisLine={false} tickLine={false} style={{ fontSize: '12px', fill: '#666' }} />
+                        <YAxis
+                            domain={[0, 100]}
+                            ticks={[0, 25, 50, 75, 100]}
+                            axisLine={false}
+                            tickLine={false}
+                            tickFormatter={(value) => `${value}+`}
+                            style={{ fontSize: '12px', fill: '#666' }}
+                        />
+                        <Tooltip
+                            cursor={{ strokeDasharray: '3 3', stroke: '#ccc' }}
+                            contentStyle={{
+                                backgroundColor: '#fff',
+                                border: '1px solid #ddd',
+                                borderRadius: '4px',
+                                boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+                                padding: '10px'
+                            }}
+                            labelStyle={{ color: '#333', fontWeight: 'bold' }}
+                            itemStyle={{ color: '#555' }}
+                            formatter={(value) => `${value}%`}
+                        />
+                        <Line
+                            type="monotone"
+                            dataKey="percentage"
+                            stroke="#5a72ee" // Exact blue color from the image
+                            strokeWidth={3}
+                            dot={{ stroke: '#5a72ee', strokeWidth: 2, r: 5, fill: '#fff' }} // Blue dots with white fill
+                            activeDot={{ r: 8, strokeWidth: 3, fill: '#5a72ee', stroke: '#5a72ee' }}
+                        />
+                    </LineChart>
+                </ResponsiveContainer>
+            </div>
+        </div>
+    );
+
+                
             case 'Conversion':
                 return (
                     <div className={styles.conversionContainer}>

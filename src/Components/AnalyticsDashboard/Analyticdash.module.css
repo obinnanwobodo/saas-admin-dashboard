@@ -298,3 +298,159 @@
     border-radius: 12px;
     border: 1px dashed #cbd5e1;
 }   
+
+
+
+
+/* AnalyticsDashboard.module.css */
+
+/* --- General Card & Text Styles --- */
+
+.chartCard {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+}
+
+.chartHeader {
+    display: flex;
+    
+    margin-bottom: 20px;
+}
+
+.chartIcon {
+    color: #5a72ee;
+    margin-right: 10px;
+    font-size: 24px;
+}
+
+.chartTitleGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.chartTitle {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+    
+}
+
+.chartSubtitle {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+   
+}
+
+/* --- Conversion Tab Specific Styles --- */
+
+.conversionContainer {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Allows sections to wrap on smaller screens */
+}
+
+/* --- Conversion Funnel Section --- */
+.conversionFunnel {
+    flex: 2; /* Takes up more space */
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    min-width: 300px;
+}
+
+.funnelList {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0 0; /* Add top margin */
+}
+
+.funnelItem {
+    display: flex;
+    justify-content: space-between; /* Aligns labels to the left and values to the right */
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0; /* Light gray divider */
+    font-size: 14px;
+    color: #333;
+}
+
+.funnelItem:last-child {
+    border-bottom: none; /* No border for the last item */
+}
+
+.funnelLabel {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+.funnelDot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background-color: #4251f0; /* This color is used for all dots as per the provided code */
+}
+
+.funnelValues {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between value and percentage */
+}
+
+.funnelValue {
+    font-weight: 600;
+}
+
+.funnelPercentage {
+    color: #888;
+    font-size: 13px;
+}
+
+/* --- Overall Conversion Rate Card --- */
+
+.conversionRateCard {
+    flex: 1; /* Takes up remaining space */
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-width: 200px;
+}
+
+.conversionRateValue {
+    font-size: 48px;
+    font-weight: bold;
+    color: #5a72ee; /* Blue color for the main value */
+    margin: 0;
+}
+
+.conversionRateLabel {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.conversionRateChange {
+    font-size: 14px;
+    font-weight: 500;
+    color: #888; /* Default color for change text */
+}
+
+.positiveChange {
+    color: #28a745; /* Green color for positive change */
+    font-weight: 600;
+}

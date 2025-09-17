@@ -43,13 +43,13 @@ const Navbar = () => {
     const renderContent = () => {
         switch (activeMenu) {
             case "Dashboard":
-                return <Dashboard />;
+                return <Dashboard isSidebarCollapsed={isSidebarCollapsed}/>;
             case "Users":
-                return <Users />;
+                return <Users isSidebarCollapsed={isSidebarCollapsed}/>;
             case "Reports":
-                return <Report />;
+                return <Report isSidebarCollapsed={isSidebarCollapsed}/>;
             case "Analytics":
-                return <AnalyticsDashboard />;
+                return <AnalyticsDashboard isSidebarCollapsed={isSidebarCollapsed}/>;
             default:
                 return (
                     <div className={`${styles.genContent}`}>
@@ -139,8 +139,7 @@ const Navbar = () => {
                             className={styles.prof}
                             src={profile}
                             alt='profile_pic'
-                            width={40}
-                            height={40}
+                        
                         />
                         {isProfileOpen && (
                             <div className={styles.profileDropdown}>

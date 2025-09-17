@@ -146,7 +146,6 @@ gap: 10px;
 
 
 
-
 .usergen{
 background-color: #fefefe;
 width: 500px;
@@ -401,3 +400,25 @@ padding: 5px;
 }
 
 
+
+
+/* In Dashboard.module.css */
+
+/* When the sidebar is collapsed, the dashboard container gets a special class */
+.dashboardgen.dashboardExpanded .revtrendgen, 
+.dashboardgen.dashboardExpanded .usergen {
+    flex: 1; /* Make these two elements take up equal available space */
+    width: auto; /* Override fixed width if any */
+}
+
+.dashboardgen.dashboardExpanded .devicegen, 
+.dashboardgen.dashboardExpanded .recentgen {
+    flex: 1; /* Make these two elements take up equal available space */
+    width: auto; /* Override fixed width if any */
+}
+
+.revnduser, .devicendrec {
+    display: flex; /* These are already flex containers */
+    justify-content: space-between;
+    gap: 20px;
+}

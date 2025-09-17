@@ -1,316 +1,296 @@
-
-
-
 /* USER GENERAL */
-
-.usergen{
-
+.usersgen {
+  /* You can add a max-width and center it if you like */
 }
 
-.fitstpart{
-
+.fitstpart {
+  /* No change */
 }
 
-.umanage{
-    font-size: 30px;
-    color: #21242c;
-    font-family: system-ui;
-    font-weight: 700;
+.umanage {
+  font-size: 30px;
+  color: #21242c;
+  font-family: system-ui;
+  font-weight: 700;
 }
 
-.manage{
-    font-size: 16px;
-    color: #6e7a91;
-    font-family: system-ui;
+.manage {
+  font-size: 16px;
+  color: #6e7a91;
+  font-family: system-ui;
+}
+
+.searchndfilter {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+}
+
+.searchgen2 {
+  display: flex;
+  background-color: #f3f4f680;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid #4251f0;
+  width: 400px;
+  border-radius: 10px;
+}
+
+.searchgen2 input {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  width: 100%;
+}
+
+.fea {
+  display: flex;
+  gap: 40px;
+}
+
+.fea svg {
+  color: #21242c;
+  width: 20px;
+  height: 20px;
+}
+
+.filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-family: system-ui;
+  color: #21242c;
+  background-color: #f8f7fc;
+  gap: 10px;
+  border-radius: 10px;
+  width: 100px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.export {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-family: system-ui;
+  color: #21242c;
+  background-color: #f8f7fc;
+  border-radius: 10px;
+  width: 100px;
+  font-weight: 500;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-family: system-ui;
+  color: #ffffff;
+  background-color: #4251f0;
+  border-radius: 10px;
+  width: 100px;
+  font-weight: 500;
+  gap: 10px;
+  cursor: pointer;
+  /* Add these to make it a proper button and remove default styles */
+  border: none;
+  outline: none;
+  padding: 0;
+}
+
+.add > div {
+  display: flex; /* To correctly align the icon inside the button */
+  align-items: center;
 }
 
 
-.searchndfilter{
-    display: flex;
-justify-content: space-between;
-padding-top: 30px;
-}
-
-.searchgen2{
-display: flex;
-    background-color: #f3f4f680;
-align-items: center;
-gap: 10px;
-padding: 10px;
-border: 1px solid #4251f0;
-width: 400px;
-border-radius: 10px;
-
-}
-
-.searchgen2 input{
-outline: none;
-
-}
-
-.fea{
-    display: flex;
-    gap: 40px;
-}
-
-.fea svg{
-    color: #21242c;
-    width: 20px;
-height: 20px;
-}
-
-.filter{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 14px;
-    font-family: system-ui;
-color: #21242c;
-background-color: #f8f7fc;
-gap: 10px;
-border-radius: 10px;
-width: 100px;
-font-weight: 500;
-cursor: pointer;
-    
-}
-
-.export{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-      font-size: 14px;
-    font-family: system-ui;
-color: #21242c;
-background-color: #f8f7fc;
-border-radius: 10px;
-width: 100px;
-font-weight: 500;
-gap: 10px;
-cursor: pointer;
-
-}
-
-.add{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-      font-size: 14px;
-    font-family: system-ui;
-color: #ffffff;
-background-color: #4251f0;
-border-radius: 10px;
-width: 100px;
-font-weight: 500;
-gap: 10px;
-cursor: pointer;
-
-}
-
-
+/* ... (existing CSS for .usersgen, .fitstpart, .umanage, etc.) ... */
 
 /* SECOND PART TABLE  */
-
-.secondpart{
-    display: flex;
-    flex-direction: column;
-    background-color: #fefefe;
-margin-top: 30px;
-padding: 30px;
-border-radius: 10px;
-padding-bottom: 50px;
+.secondpart {
+  display: flex;
+  flex-direction: column;
+  background-color: #fefefe;
+  margin-top: 30px;
+  padding: 30px;
+  border-radius: 10px;
+  padding-bottom: 50px;
 }
 
-
-
-
 .alluse {
-font-size: 23px;
-color: #21242c;
-font-weight: 500;
-    font-family: system-ui;
-
+  font-size: 23px;
+  color: #21242c;
+  font-weight: 500;
+  font-family: system-ui;
 }
 
 .alist {
-font-size: 14px;
-color: #6e7a91;
-    font-family: system-ui;
-
+  font-size: 14px;
+  color: #6e7a91;
+  font-family: system-ui;
 }
 
-
-.tablegen{
-margin-top: 30px;
+.tablegen {
+  margin-top: 30px;
 }
 
-.firstline{
-    display: flex;
-    font-size: 14px;
-    color: #6e7a91;
-    font-family: system-ui;
-    font-weight: 500;
-    justify-content: space-between;
-      box-shadow: 0 1px 0 rgba(220, 220, 220, 0.9);
-      padding-bottom: 10px;
+/* Use CSS Grid for the table headers and rows */
+.firstline,
+.secondline {
+  display: grid;
+  /* Define grid columns for each section: User, Role, Status, etc. */
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr 0.5fr; /* Adjust these values to fine-tune spacing */
+  align-items: center;
+  font-family: system-ui;
+  padding-bottom: 10px;
+  box-shadow: 0 1px 0 rgba(220, 220, 220, 0.9);
 }
 
-
-.secondline{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 15px;
-      box-shadow: 0 1px 0 rgba(220, 220, 220, 0.9);
-      padding-bottom: 10px;
-
+.firstline {
+  color: #6e7a91;
+  font-weight: 500;
+  font-size: 14px;
 }
 
-.secondline:hover{
-    background-color: rgb(236, 236, 239);
+.secondline {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #21242c;
 }
 
-.userimg{
-    background-color: #333333;
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
+.secondline:hover {
+  background-color: rgb(236, 236, 239);
 }
 
-
-.jon{
- 
-    font-size: 14px;
-    color: #21242c;
-    font-family: system-ui;
-    font-weight: 500;
-
+.userimg {
+  background-color: #333333;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
 }
 
-.jonemail{
-
-  display: flex;
-    font-size: 14px;
-    color: #6e7a91;
-    font-family: system-ui;
-
+.userimg_pic {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-    .adm, .accti, .datee{
+.jon {
+  font-size: 14px;
+  color: #21242c;
+  font-family: system-ui;
+  font-weight: 500;
+  margin: 0;
+}
+
+.jonemail {
   font-size: 12px;
-    font-family: system-ui;
-color: #21242c;
+  color: #6e7a91;
+  font-family: system-ui;
+  margin: 0;
 }
 
- .datee, .timeo, .dlstdot{
-    font-size: 12px;
-    font-family: system-ui;
-color: #6e7a91;
+.first3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.adm{
-    position: relative;
-right: 72px;
+/* Remove all these old, relative positioning styles */
+.adm,
+.accti,
+.datee,
+.timeo,
+.dlstdot {
+  font-size: 12px;
+  font-family: system-ui;
+  color: #21242c;
+  /* Removed all 'position: relative' and negative margins */
 }
 
-.admi{
-    position: relative;
-right: 50px;
-font-size: 12px;
-    font-family: system-ui;
+.accti {
+  color: green;
+  font-weight: 600;
 }
 
-.acctii{
- position: relative;
-right: 85px;
-font-size: 12px;
-    font-family: system-ui;
-    color: #21242c;
+.acctii {
+  color: gray;
 }
 
-.accti{
-    position: relative;
-right: 93px;
-color: #21242c;
-}
-
-.datee{
-     position: relative;
-right: 112px;
-}
-
-.timeo{
-     position: relative;
-right: 133px;
-}
-
-.middlege{
-display: flex;
-justify-content: space-between;
-gap: 100px;
-margin-left: 30px;
-}
-
-
-.middlele2{
-display: flex;
-justify-content: space-between;
-gap: 120px;
-margin-left: 40px;
-
-}
-
-.dlstdot{
-    position: relative;
-    right: 18px;
+/* Use these new classes for the table data cells */
+.role_data,
+.status_data,
+.join_date_data,
+.last_login_data,
+.actions_data {
+  /* This ensures the content aligns correctly within the grid cells */
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #21242c;
 }
 
 
 
-
-
-
-/* THIDG PART MAPPING */
-
-
-.thirdpart{
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-margin-top: 20px;
-
+/* THIRD PART MAPPING */
+.thirdpart {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
 }
 
-.eachofthem{
-    background-color: #fefefe;
-    padding: 15px;
-    border-radius: 10px;
-    width: 245px;
-    height: 130px;
+.eachofthem {
+  background-color: #fefefe;
+  padding: 15px;
+  border-radius: 10px;
+  width: 245px;
+  height: 130px;
 }
 
-.boxcontent{
-padding-top: 20px;
-padding-left: 10px;
+.boxcontent {
+  padding-top: 20px;
+  padding-left: 10px;
 }
 
-.userr{
-font-size: 14px;
-color: #21242c;
-font-family: system-ui;
-font-weight: 500;
+.userr {
+  font-size: 14px;
+  color: #21242c;
+  font-family: system-ui;
+  font-weight: 500;
 }
 
-.numberr{
-font-size: 24px;
-color: #21242c;
-font-family: system-ui;
-font-weight: 700;
+.numberr {
+  font-size: 24px;
+  color: #21242c;
+  font-family: system-ui;
+  font-weight: 700;
 }
 
-.detailss{
-font-size: 12px;
-color: #6e7a91;
-font-family: system-ui;
+.detailss {
+  font-size: 12px;
+  color: #6e7a91;
+  font-family: system-ui;
+}
+
+
+
+
+
+
+.thirdpart.usersExpanded .thirdpart  {
+  flex: 1; /* Make these two elements take up equal available space */
+    width: 100%; /* Override fixed width if any */
 
 }
