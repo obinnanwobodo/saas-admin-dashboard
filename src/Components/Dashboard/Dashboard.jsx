@@ -6,7 +6,7 @@ import { IoMdTrendingUp } from "react-icons/io";
 import { FiUsers } from "react-icons/fi";
 import { LuDollarSign, LuActivity } from "react-icons/lu";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar } from 'recharts';
-import DeviceUsageChart from "../Charts/DeviceUsageChart.jsx";
+import DeviceUsageChart from "../charts/DeviceUsageChart.jsx";
 import { FaUsers, FaChartLine } from 'react-icons/fa';
 import { MdAccessTime } from 'react-icons/md';
 
