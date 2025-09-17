@@ -1,0 +1,403 @@
+
+/* DASHBOARD */
+
+.dashboardgen{
+
+}
+
+.dash{
+font-family: system-ui;
+font-size: 30px;
+color: #21242c;
+font-weight: 700;
+}
+
+.welcome{
+font-family: system-ui;
+font-size: 16px;
+color: #6e7a91;
+}
+
+
+.mappingboxgen{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 20px;
+    margin-top: 23px;
+}
+
+
+.eachbox{
+    display: flex;
+    flex-direction: column;
+    background-color: #fefefe;
+    padding: 25px;
+    min-width: 235px;
+    border-radius: 10px;
+    padding-top: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08), 0 3px 5px rgba(0, 0, 0, 0.05);
+     transition: transform 0.3s ease-in-out; 
+}
+
+.eachbox:hover{
+     transform: scale(1.08);
+}
+
+.head{
+    font-size: 14px;
+    color: #6e7a91;
+    font-family: system-ui
+
+}
+
+.headndicon{
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon{
+    background-color: #4251f01a;
+    padding: 9px;
+    border-radius: 5px;
+}
+
+.icon svg{
+    color: #4251f0;
+    width: 20px;
+    height: 20px;
+}
+
+.amount{
+    font-size: 24px;
+    font-family: system-ui;
+    color: #21242c;
+    font-weight: 700;
+}
+
+.percent{
+    font-size: 12px;
+    font-family: system-ui;
+color: #16a249;
+}
+
+.final{
+    font-size: 12px;
+    font-family: system-ui;
+    color: #6e7a91;
+}
+
+.specialpercent{
+    color: #ef4343 !important;
+}
+
+
+
+/* REVENUE AND USER */
+
+.revnduser{
+display: flex;
+justify-content: space-between;
+padding-top: 20px;
+gap: 7px;
+}
+
+.revtrendgen{
+background-color: #fefefe;
+width: 500px;
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08), 0 3px 5px rgba(0, 0, 0, 0.05);
+border-radius: 10px;
+margin-right: 3px;
+padding: 10px;
+padding-bottom: 20px;
+
+}
+
+
+.icnndrev{
+    display: flex;
+    align-items: center;
+gap: 10px;
+
+}
+
+.icnndrev h2{
+    font-size: 24px;
+    color: #21242c;
+    font-weight: 700;
+}
+
+.monthly{
+    font-size: 14px;
+    color: #6e7a91;
+    font-family: system-ui;
+    padding-bottom: 30px;
+}
+
+
+
+.trendicnn svg{
+    color: #4251f0;
+     width: 20px;
+    height: 20px;
+}
+
+
+
+
+
+
+.usergen{
+background-color: #fefefe;
+width: 500px;
+margin-right: 16px;
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08), 0 3px 5px rgba(0, 0, 0, 0.05);
+border-radius: 10px;
+padding-bottom: 20px;
+padding: 10px;
+
+}
+
+.icnnduser{
+    display: flex;
+    align-items: center;
+gap: 10px;
+}
+
+.icnnduser h2{
+     font-size: 24px;
+    color: #21242c;
+    font-weight: 700;
+}
+
+
+.usersicn svg{
+    color: #4251f0;
+ width: 20px;
+    height: 20px;
+}
+
+.useracq{
+    font-size: 14px;
+    color: #6e7a91;
+    font-family: system-ui;  
+    padding-bottom: 30px;
+
+}
+
+
+/* DEVICE AND RECENT*/
+
+.devicendrec{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.devicegen{
+background-color: #fefefe;
+width: 322px;
+height: 450px;
+margin-right: 16px;
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08), 0 3px 5px rgba(0, 0, 0, 0.05);
+border-radius: 10px;
+padding: 10px;
+}
+
+.devicegen h2{
+    font-size: 24px;
+    color: #21242c;
+    font-weight: 700;
+}
+
+.devicegen{
+    font-size: 14px;
+    color: #6e7a91;
+    font-family: system-ui; 
+
+}
+
+
+.chartContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;        /* White card background */
+  border-radius: 12px;        /* Rounded corners */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+  padding: 20px;
+  margin: 20px 0;
+  height: 320px;              /* Fixed card height */
+}
+
+.chartTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.chartWrapper {
+  width: 100%;
+  height: 250px;  /* Matches ResponsiveContainer height */
+}
+
+
+
+.genperc{
+
+}
+
+
+.percgrp1, .percgrp2, .percgrp3{
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 5px;
+padding-right: 5px;
+padding-left: 5px;
+}
+
+
+.mbl, .dstop, .tblt{
+font-size: 14px;
+color: #21242c;
+font-family: system-ui;
+font-weight: 500;
+}
+
+.six8, .two2, .ten{
+font-size: 14px;
+color: #21242c;
+font-family: system-ui;
+font-weight: 500;
+}
+
+
+
+
+
+
+/* RECENT */
+
+
+.allgroups{
+display: flex;
+ flex-direction: column;
+ gap: 20px;
+}
+
+
+.recentgen{
+background-color: #fefefe;
+width: 678px;
+height: 450px;
+margin-right: 16px;
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08), 0 3px 5px rgba(0, 0, 0, 0.05);
+border-radius: 10px;
+padding: 10px;
+}
+
+.icnndrecent{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icnndrecent svg{
+    color: #4251f0;
+ width: 20px;
+    height: 20px;
+}
+
+.recentgen h2{
+     font-size: 24px;
+    color: #21242c;
+    font-weight: 700;
+}
+
+.late{
+        font-size: 14px;
+    color: #6e7a91;
+    font-family: system-ui;
+    padding-bottom: 25px; 
+}
+
+
+
+.group{
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: #f3f4f680;
+border-radius: 10px;
+padding: 5px;
+}
+
+.group:hover{
+    background-color: rgb(246, 244, 244);
+}
+
+.rounddot1{
+    background-color: #4251f0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.rounddot2{
+    background-color: green;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.rounddot3{
+    background-color: orange;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+.rounddot4{
+    background-color: blue;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+.rounddot5{
+    background-color: gray;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+
+
+.first3{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.namendact h4{
+    font-size: 14px;
+    font-family: system-ui;
+    color: #21242c;
+    font-weight: 500;
+}
+
+.namendact p{
+    font-size: 12px;
+    font-family: system-ui;
+    color: #6e7a91;
+}
+
+.timme{
+    font-size: 12px;
+    font-family: system-ui;
+    color: #6e7a91;
+}
+
+

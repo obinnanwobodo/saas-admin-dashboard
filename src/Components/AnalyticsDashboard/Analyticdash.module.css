@@ -1,0 +1,300 @@
+/* Main Page Layout */
+.analyticsPage {
+    padding: 2rem;
+    background-color: #f7f9fc;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Titles and Subtitles */
+.analyticsTitle {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.analyticsSubtitle {
+    font-size: 1rem;
+    color: #64748b;
+    margin-bottom: 1rem;
+}
+
+/* Metrics Grid */
+.metricsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.metricCard {
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+    transition: transform 0.2s ease-in-out;
+    
+}
+
+.metricCard:hover {
+    transform: translateY(-5px);
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.metricLabel {
+    font-size: 14px;
+    color: #475569;
+    font-weight: 500;
+    font-family: system-ui;
+}
+
+.metricIcon {
+    font-size: 1.8rem   ;
+    color: #4251f0;
+    
+}
+
+.metricValue {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0.5rem 0;
+    font-weight: 700;
+    font-family: system-ui;
+    position: relative;
+    bottom: 7px;
+}
+
+.metricChange {
+    font-size: 0.875rem;
+    font-weight: 500;
+      position: relative;
+    bottom: 7px;
+}
+
+.positiveChange {
+     font-size: 12px;
+    font-family: system-ui;
+
+    color: #22c55e;
+}
+
+.negativeChange {
+     font-size: 12px;
+    font-family: system-ui;
+
+    color: #ef4444;
+}
+
+/* Tabbed Navigation */
+.tabsContainer {
+    display: flex;
+    gap: 100px;
+    border-bottom: 2px solid #e2e8f0;
+    margin-top: 1.5rem;
+}
+
+.tabButton {
+    background-color: transparent;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #64748b;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s ease-in-out;
+}
+
+.tabButton:hover {
+    color: #1e293b;
+}
+
+.tabButton.activeTab {
+    border-bottom: 2px solid #4251f0;
+}
+
+/* Content Area for Tabs */
+.tabContent {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+}
+
+/* Chart Styles */
+.chartsContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .chartsContainer {
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    }
+}
+
+.chartCard {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+}
+
+.chartHeader {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.chartIcon {
+    font-size: 2rem;
+    color: #4251f0;
+    margin-bottom: 0.5rem;
+}
+
+.chartTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 0.25rem;
+}
+
+.chartSubtitle {
+    font-size: 0.875rem;
+    color: #64748b;
+}
+
+.chartWrapper {
+    width: 100%;
+    height: 250px;
+}
+
+/* Conversion Funnel */
+.conversionContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .conversionContainer {
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+.conversionFunnel {
+    background-color: #f8fafc;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+.funnelList {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0 0;
+    color: #21242c;
+    font-family: system-ui;
+}
+
+.funnelItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    margin-bottom: 0.75rem;
+}
+
+.funnelLabel {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    color: #21242c;
+
+}
+
+.funnelDot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.funnelValues {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 700;
+    font-family: system-ui;
+    
+}
+
+.funnelValue {
+   
+    color: #21242c;
+
+}
+
+.funnelPercentage {
+    color: #64748b;
+    font-size: 12px;
+}
+
+.conversionRateCard {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.conversionRateValue {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #4251f0;
+    margin-bottom: 0.5rem;
+}
+
+.conversionRateLabel {
+    font-size: 1rem;
+    color: #475569;
+    font-weight: 600;
+}
+
+.conversionRateChange {
+    margin-top: 0.5rem;
+    font-weight: 500;
+}
+
+/* Placeholder for sections without charts */
+.placeholder {
+    padding: 2rem;
+    text-align: center;
+    font-size: 1.25rem;
+    color: #64748b;
+    background-color: #f1f5f9;
+    border-radius: 12px;
+    border: 1px dashed #cbd5e1;
+}   
