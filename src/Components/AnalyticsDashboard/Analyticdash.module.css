@@ -565,14 +565,16 @@
 
   /* Funnel list items */
   .funnelItem {
-    flex-direction: column; /* Stack label and values vertically */
-    align-items: flex-start;
+  
     padding: 10px 0;
     font-size: 13px;
+      display: flex;
+    align-items: center;
   }
 
   .funnelLabel {
     margin-bottom: 5px; /* Add space between label and values */
+  
   }
 
   .funnelValues {
