@@ -396,12 +396,13 @@
 
     /* Bottom section */
     .thirdpart {
-        flex-wrap: wrap; /* Allow the info boxes to wrap */
-        justify-content: flex-start;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
         gap: 20px;
+   
     }
     .eachofthem {
-        width: calc(50% - 10px); /* Make boxes take up roughly half the width */
+        width: calc(100% - 10px); /* Make boxes take up roughly half the width */
         height: 120px;
         justify-content: center;
     }
@@ -410,3 +411,5 @@
         margin-right: 20px;
     }
 }
+
+
