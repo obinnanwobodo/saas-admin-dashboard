@@ -467,5 +467,158 @@ background-color: rgb(246, 246, 248);
 
 
 
+/* RESPONSIVNESS */
 
 
+@media (max-width: 768px) {
+  /* Main container padding */
+  .reportsContainer {
+    padding: 10px;
+  }
+
+  /* Header adjustments */
+  .reportsTitle {
+    font-size: 24px;
+  }
+
+  .reportsSubtitle {
+    font-size: 14px;
+  }
+
+  /* Actions section */
+  .reportsActions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+
+  .filterGroup {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .filterButton {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+
+  .actionButtons {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .uploadButton,
+  .generateButton {
+    width: 100px;
+    font-size: 12px;
+    padding: 8px 5px;
+  }
+
+  .uploadButton span,
+  .generateButton span {
+    display: flex;
+    white-space: nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+   .generateButton span{
+    position: relative;
+    right: 8px;
+   }
+
+  /* Report cards grid */
+  .reportsGrid {
+    flex-direction: column;
+  }
+
+  .reportCard {
+    min-width: unset;
+  }
+
+  /* Recent reports table */
+  .recentReportsContainer {
+    padding: 15px;
+    overflow-x: auto;
+  }
+
+  .reportsTable {
+    width: 800px; /* Force a fixed width to enable scrolling */
+  }
+
+  /* Widget section */
+  .widgetLayout {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .widgetCard {
+    min-width: unset;
+  }
+
+  .widgetListItem {
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .generateBtn {
+    margin-left: auto;
+  }
+}
+
+
+
+
+
+@media (min-width: 769px) and (max-width: 1199px) {
+  /* Main container padding */
+  .reportsContainer {
+    padding: 20px;
+  }
+
+  /* Actions section */
+  .reportsActions {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .filterGroup {
+    gap: 10px;
+  }
+
+  .actionButtons {
+    gap: 10px;
+  }
+
+  /* Report cards grid */
+  .reportsGrid {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .reportCard {
+    width: calc(50% - 10px); /* Two cards per row with a gap */
+    min-width: unset;
+  }
+
+  /* Recent reports table */
+  .recentReportsContainer {
+    padding: 20px;
+  }
+
+  .reportsTable {
+    width: 100%;
+  }
+
+  /* Widget section */
+  .widgetLayout {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .widgetCard {
+    width: calc(50% - 10px); /* Two widgets per row with a gap */
+    min-width: unset;
+  }
+}

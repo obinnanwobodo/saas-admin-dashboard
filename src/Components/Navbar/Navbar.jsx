@@ -43,7 +43,7 @@ const Navbar = () => {
     // New handler to close sidebar on main content click
     const handleMainContentClick = () => {
         // Only close sidebar on mobile if it's open
-        if (window.innerWidth <= 768 && !isSidebarCollapsed) {
+        if (window.innerWidth <= 1200 && !isSidebarCollapsed) {
             setIsSidebarCollapsed(true);
         }
     };

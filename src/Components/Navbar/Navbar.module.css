@@ -612,3 +612,105 @@ padding: 1px;
     
   }
 }
+
+
+
+
+@media (min-width: 769px) and (max-width: 1199px) {
+  /* Adjustments for the main container layout */
+  .navgen {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    overflow-x: hidden;
+  }
+
+  /* Adjustments for the sidebar */
+  .menuside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 250px; /* A fixed width for the sidebar on these screens */
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 2000;
+  }
+  
+  /* Sidebar toggle when open */
+  .navgen:not(.collapsed) .menuside {
+    transform: translateX(0);
+  }
+
+  /* Ensure the sidebar hides when in a collapsed state */
+  .collapsed .menuside {
+    transform: translateX(-100%);
+  }
+
+  /* Adjustments for the top navigation bar */
+  .topnavside {
+    display: flex;
+    align-items: center; /* Vertically center the items */
+    position: fixed;
+    top: 0;
+    left: 0; /* Align to the left */
+    padding: 0 20px; /* Add padding on both sides */
+    width: 100%;
+    gap: 20px; /* Increase gap for better spacing */
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.08); /* Updated background color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    z-index: 1200; /* Ensure it's on top of other content */
+    transition: none;
+  }
+
+  /* Show the mobile toggle icon and position it to the right */
+  .sidebaricn {
+    display: flex; /* Keep this to display the icon */
+    font-size: 24px;
+    color: #6e7a91;
+    cursor: pointer;
+  }
+
+  /* Make sure the desktop toggle is hidden in this view */
+  .desktopToggle {
+    display: block; /* Hide the desktop toggle */
+    
+  }
+
+  /* Adjustments for the main content area */
+  .topnavndcontent {
+    width: 100%;
+    margin-left: 0;
+    padding-top: 80px; /* Increase top padding to prevent content overlap */
+    background-color: rgba(255, 255, 255, 0.08);
+  }
+
+  /* Adjustments for search and profile on medium screens */
+  .searchgen {
+    flex: 1; /* Allow search bar to grow and take up space */
+    max-width: 350px; /* Limit its size */
+  }
+
+  .profilesection {
+    margin-left: auto; /* Push the profile section to the right */
+  }
+
+  .profileDropdown{
+    display: flex;
+    flex-direction: column;
+right: 0;
+margin-right: 30px; 
+width: 30%;
+   
+  }
+}
+
+
+
+
+@media (min-width: 769px) {
+   .desktopToggle {
+    display: none;
+   }
+}

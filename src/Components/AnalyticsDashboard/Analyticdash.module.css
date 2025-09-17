@@ -454,3 +454,83 @@
     color: #28a745; /* Green color for positive change */
     font-weight: 600;
 }
+
+
+
+
+
+/* RESPONSIVNESS */
+
+
+/* --- Mobile (0px - 768px) --- */
+@media (max-width: 768px) {
+  .analyticsPage {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .analyticsTitle {
+    font-size: 1.5rem;
+  }
+
+  .analyticsSubtitle {
+    font-size: 0.875rem;
+  }
+
+  /* Metrics Grid */
+  .metricsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Tabbed Navigation */
+  .tabsContainer {
+    gap: 20px;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent tabs from wrapping */
+  }
+
+  .tabButton {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+
+  /* Charts */
+  .chartsContainer {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  /* Conversion Funnel */
+  .conversionContainer {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- Tablet (769px - 1199px) --- */
+@media (min-width: 769px) and (max-width: 1199px) {
+  .analyticsPage {
+    padding: 1.5rem;
+  }
+
+  /* Metrics Grid */
+  .metricsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Tabbed Navigation */
+  .tabsContainer {
+    gap: 40px;
+  }
+
+  /* Charts */
+  .chartsContainer {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem;
+  }
+
+  /* Conversion Funnel */
+  .conversionContainer {
+    grid-template-columns: 1.5fr 1fr; /* Adjusting proportions */
+    gap: 1.5rem;
+  }
+}

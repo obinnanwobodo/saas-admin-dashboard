@@ -294,3 +294,118 @@
     width: 100%; /* Override fixed width if any */
 
 }
+
+
+
+
+
+
+/* RESPONSIVNESS */
+
+
+
+@media (max-width: 768px) {
+    /* Main container adjustments for mobile */
+    .usersgen {
+        padding: 10px;
+    }
+
+    /* Top section */
+    .umanage {
+        font-size: 24px;
+    }
+    .manage {
+        font-size: 14px;
+    }
+    .searchndfilter {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    .searchgen2 {
+        width: 100%;
+    }
+    .fea {
+        width: 100%;
+        justify-content: space-between;
+        gap: 10px;
+    }
+    .filter, .export, .add {
+        width: 100px;
+        font-size: 12px;
+        padding: 8px 5px;
+        gap: 5px;
+    }
+    .filter p, .export p, .add p {
+        display: flex; /* Hide text on smaller buttons */
+    }
+
+    /* Table adjustments */
+    .secondpart {
+        padding: 15px;
+        overflow-x: auto; /* Enable horizontal scrolling for the table */
+    }
+    .tablegen {
+        width: 650px; /* Give the table a fixed width to enable scrolling */
+    }
+    .firstline, .secondline {
+        grid-template-columns: 2fr 1fr 1fr 1fr 1fr 0.5fr;
+        padding-bottom: 5px;
+    }
+
+    /* Bottom section */
+    .thirdpart {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    .eachofthem {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+
+@media (min-width: 769px) and (max-width: 1199px) {
+    /* Main container adjustments for tablets */
+    .usersgen {
+        padding: 20px;
+    }
+
+    /* Top section */
+    .searchndfilter {
+        flex-wrap: wrap; /* Allow items to wrap to the next line */
+    }
+    .searchgen2 {
+        width: 300px;
+    }
+    .fea {
+        gap: 20px;
+    }
+    .filter, .export, .add {
+        width: 80px; /* Slightly reduce button width */
+        font-size: 12px;
+    }
+
+    /* Table adjustments */
+    .firstline, .secondline {
+        grid-template-columns: 2fr 1fr 1fr 1fr 1fr 0.5fr;
+    }
+
+    /* Bottom section */
+    .thirdpart {
+        flex-wrap: wrap; /* Allow the info boxes to wrap */
+        justify-content: flex-start;
+        gap: 20px;
+    }
+    .eachofthem {
+        width: calc(50% - 10px); /* Make boxes take up roughly half the width */
+        height: 120px;
+        justify-content: center;
+    }
+    /* Specific adjustment for the last two boxes to prevent odd layout */
+    .eachofthem:nth-child(2n+1) {
+        margin-right: 20px;
+    }
+}
