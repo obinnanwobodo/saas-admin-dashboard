@@ -17,7 +17,7 @@ import profile from '../../../public/Gemini_Generated_Image_eu7k7feu7k7feu7k.png
 import styles from './Navbar.module.css'
 
 const Navbar = () => {
-    const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
+    const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(true);
     const [activeMenu, setActiveMenu] = useState("Dashboard");
     const [isNotificationsOpen, setIsNotificationsOpen] = useState(false);
     const [isProfileOpen, setIsProfileOpen] = useState(false);

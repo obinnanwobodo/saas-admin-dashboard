@@ -485,3 +485,106 @@ padding: 1px;
 
 
 
+
+
+
+
+/* RESPONSIVNESS */
+
+
+@media (max-width: 768px) {
+  /* Main Layout Adjustment for Mobile */
+  .navgen {
+    flex-direction: column;
+    height: auto;
+    overflow-x: hidden;
+  }
+
+  /* Top Navbar */
+  .topnavside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 10px;
+    gap: 15px;
+    justify-content: space-between;
+    height: 60px;
+    transition: none; /* No transition on top nav for instant changes */
+  }
+
+  .sidebaricn {
+    display: flex; /* Ensure the menu icon is visible */
+    margin-left: 0;
+    font-size: 24px;
+    color: #0c0e11; /* Change color for better visibility */
+  }
+
+  .searchgen, .profilesection {
+    display: none; /* Hide search bar and profile section to save space */
+  }
+  
+  /* Notifications Dropdown for Mobile */
+  .notifygen {
+    position: relative;
+    z-index: 1001;
+  }
+  
+  .notificationDropdown {
+      right: 10px;
+      width: 95vw; /* Make it almost full screen width on mobile */
+      max-width: 300px;
+  }
+
+  /* Sidebar for Mobile */
+  .menuside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 70%; /* Covers 70% of the screen */
+    transform: translateX(-100%); /* Hides the sidebar by default */
+    transition: transform 0.3s ease-in-out;
+    z-index: 2000;
+  }
+  
+  /* When sidebar is not collapsed, it slides in */
+  .navgen:not(.collapsed) .menuside {
+    transform: translateX(0);
+  }
+
+  .collapsed .menuside {
+    transform: translateX(-100%);
+  }
+
+  /* Top nav and content for mobile */
+  .topnavndcontent {
+    width: 100%;
+    margin-left: 0;
+  }
+  
+  /* Hides the text on the sidebar on smaller screens when collapsed */
+  .navgen.collapsed .menuside .hndp,
+  .navgen.collapsed .menuside .wholemenu h2 {
+      display: none;
+  }
+  .navgen.collapsed .menuside .theduras p {
+      display: none;
+  }
+
+    .menuside {
+    background-color: #0c0e11; 
+  }
+
+  /* This adds a transparent overlay over the main content when the sidebar is open */
+  .navgen:not(.collapsed) .topnavndcontent::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1500;
+  }
+}
