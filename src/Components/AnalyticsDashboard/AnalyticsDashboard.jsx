@@ -112,70 +112,70 @@ const AnalyticsDashboard = () => {
                 );
             case 'Retention':
                 return (
-                
+
 
                     <div className={styles.chartCard}>
-            <div className={styles.chartHeader}>
-                <span className={styles.chartIcon}>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <circle cx="12" cy="12" r="4"></circle>
-                    </svg>
-                </span>
-                <div className={styles.chartTitleGroup}>
-                    <h3 className={styles.chartTitle}>User Retention Analysis</h3>
-                    <p className={styles.chartSubtitle}>Percentage of users retained over time</p>
-                </div>
-            </div>
-            <div className={styles.chartContent}>
-                <ResponsiveContainer width="100%" height={300}>
-                    <LineChart
-                        data={retentionData}
-                        margin={{
-                            top: 5,
-                            right: 30,
-                            left: 20,
-                            bottom: 5,
-                        }}
-                    >
-                        <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e0e0e0" />
-                        <XAxis dataKey="name" axisLine={false} tickLine={false} style={{ fontSize: '12px', fill: '#666' }} />
-                        <YAxis
-                            domain={[0, 100]}
-                            ticks={[0, 25, 50, 75, 100]}
-                            axisLine={false}
-                            tickLine={false}
-                            tickFormatter={(value) => `${value}+`}
-                            style={{ fontSize: '12px', fill: '#666' }}
-                        />
-                        <Tooltip
-                            cursor={{ strokeDasharray: '3 3', stroke: '#ccc' }}
-                            contentStyle={{
-                                backgroundColor: '#fff',
-                                border: '1px solid #ddd',
-                                borderRadius: '4px',
-                                boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
-                                padding: '10px'
-                            }}
-                            labelStyle={{ color: '#333', fontWeight: 'bold' }}
-                            itemStyle={{ color: '#555' }}
-                            formatter={(value) => `${value}%`}
-                        />
-                        <Line
-                            type="monotone"
-                            dataKey="percentage"
-                            stroke="#5a72ee" // Exact blue color from the image
-                            strokeWidth={3}
-                            dot={{ stroke: '#5a72ee', strokeWidth: 2, r: 5, fill: '#fff' }} // Blue dots with white fill
-                            activeDot={{ r: 8, strokeWidth: 3, fill: '#5a72ee', stroke: '#5a72ee' }}
-                        />
-                    </LineChart>
-                </ResponsiveContainer>
-            </div>
-        </div>
-    );
+                        <div className={styles.chartHeader}>
+                            <span className={styles.chartIcon}>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <circle cx="12" cy="12" r="4"></circle>
+                                </svg>
+                            </span>
+                            <div className={styles.chartTitleGroup}>
+                                <h3 className={styles.chartTitle}>User Retention Analysis</h3>
+                                <p className={styles.chartSubtitle}>Percentage of users retained over time</p>
+                            </div>
+                        </div>
+                        <div className={styles.chartContent}>
+                            <ResponsiveContainer width="100%" height={300}>
+                                <LineChart
+                                    data={retentionData}
+                                    margin={{
+                                        top: 5,
+                                        right: 30,
+                                        left: 20,
+                                        bottom: 5,
+                                    }}
+                                >
+                                    <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e0e0e0" />
+                                    <XAxis dataKey="name" axisLine={false} tickLine={false} style={{ fontSize: '12px', fill: '#666' }} />
+                                    <YAxis
+                                        domain={[0, 100]}
+                                        ticks={[0, 25, 50, 75, 100]}
+                                        axisLine={false}
+                                        tickLine={false}
+                                        tickFormatter={(value) => `${value}+`}
+                                        style={{ fontSize: '12px', fill: '#666' }}
+                                    />
+                                    <Tooltip
+                                        cursor={{ strokeDasharray: '3 3', stroke: '#ccc' }}
+                                        contentStyle={{
+                                            backgroundColor: '#fff',
+                                            border: '1px solid #ddd',
+                                            borderRadius: '4px',
+                                            boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+                                            padding: '10px'
+                                        }}
+                                        labelStyle={{ color: '#333', fontWeight: 'bold' }}
+                                        itemStyle={{ color: '#555' }}
+                                        formatter={(value) => `${value}%`}
+                                    />
+                                    <Line
+                                        type="monotone"
+                                        dataKey="percentage"
+                                        stroke="#5a72ee" // Exact blue color from the image
+                                        strokeWidth={3}
+                                        dot={{ stroke: '#5a72ee', strokeWidth: 2, r: 5, fill: '#fff' }} // Blue dots with white fill
+                                        activeDot={{ r: 8, strokeWidth: 3, fill: '#5a72ee', stroke: '#5a72ee' }}
+                                    />
+                                </LineChart>
+                            </ResponsiveContainer>
+                        </div>
+                    </div>
+                );
 
-                
+
             case 'Conversion':
                 return (
                     <div className={styles.conversionContainer}>
@@ -237,7 +237,7 @@ const AnalyticsDashboard = () => {
         <div className={styles.analyticsPage}>
             <h1 className={styles.analyticsTitle}>Analytics Dashboard</h1>
             <p className={styles.analyticsSubtitle}>Comprehensive insights into your business performance</p>
-            
+
             {/* The metric cards are now part of the main return to always be visible */}
             <div className={styles.metricsGrid}>
                 <div className={styles.metricCard}>

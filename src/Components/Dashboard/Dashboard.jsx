@@ -61,9 +61,9 @@ const boxarray = [
     },
 ];
 
-const Dashboard =  ({ isSidebarCollapsed }) => { 
+const Dashboard = ({ isSidebarCollapsed }) => {
     return (
-            <div className={`${styles.dashboardgen} ${isSidebarCollapsed ? styles.dashboardExpanded : ''}`}>
+        <div className={`${styles.dashboardgen} ${isSidebarCollapsed ? styles.dashboardExpanded : ''}`}>
 
             <h2 className={`${styles.dash}`}> Dashboard Overview</h2>
             <p className={`${styles.welcome}`}>Welcome back! Here's what's happening with your business today.</p>
@@ -123,7 +123,7 @@ const Dashboard =  ({ isSidebarCollapsed }) => {
                     </div>
                 </div>
             </div>
-            
+
             <div className={styles.devicendrec}>
                 <div className={styles.devicegen}>
                     <h2>Device Usage</h2>
@@ -144,7 +144,7 @@ const Dashboard =  ({ isSidebarCollapsed }) => {
                         </div>
                     </div>
                 </div>
-                
+
                 <div className={styles.recentgen}>
                     <div className={styles.icnndrecent}>
                         <div><LuActivity /></div>

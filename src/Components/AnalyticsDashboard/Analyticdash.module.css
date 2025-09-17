@@ -36,7 +36,7 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     border: 1px solid #e2e8f0;
     transition: transform 0.2s ease-in-out;
-    
+
 }
 
 .metricCard:hover {
@@ -58,9 +58,9 @@
 }
 
 .metricIcon {
-    font-size: 1.8rem   ;
+    font-size: 1.8rem;
     color: #4251f0;
-    
+
 }
 
 .metricValue {
@@ -77,19 +77,19 @@
 .metricChange {
     font-size: 0.875rem;
     font-weight: 500;
-      position: relative;
+    position: relative;
     bottom: 7px;
 }
 
 .positiveChange {
-     font-size: 12px;
+    font-size: 12px;
     font-family: system-ui;
 
     color: #22c55e;
 }
 
 .negativeChange {
-     font-size: 12px;
+    font-size: 12px;
     font-family: system-ui;
 
     color: #ef4444;
@@ -244,11 +244,11 @@
     gap: 1rem;
     font-weight: 700;
     font-family: system-ui;
-    
+
 }
 
 .funnelValue {
-   
+
     color: #21242c;
 
 }
@@ -297,7 +297,7 @@
     background-color: #f1f5f9;
     border-radius: 12px;
     border: 1px dashed #cbd5e1;
-}   
+}
 
 
 
@@ -316,7 +316,7 @@
 
 .chartHeader {
     display: flex;
-    
+
     margin-bottom: 20px;
 }
 
@@ -336,14 +336,14 @@
     font-weight: 600;
     color: #333;
     margin: 0;
-    
+
 }
 
 .chartSubtitle {
     font-size: 14px;
     color: #666;
     margin: 0;
-   
+
 }
 
 /* --- Conversion Tab Specific Styles --- */
@@ -351,12 +351,14 @@
 .conversionContainer {
     display: flex;
     gap: 20px;
-    flex-wrap: wrap; /* Allows sections to wrap on smaller screens */
+    flex-wrap: wrap;
+    /* Allows sections to wrap on smaller screens */
 }
 
 /* --- Conversion Funnel Section --- */
 .conversionFunnel {
-    flex: 2; /* Takes up more space */
+    flex: 2;
+    /* Takes up more space */
     background-color: #ffffff;
     border-radius: 8px;
     padding: 20px;
@@ -367,21 +369,25 @@
 .funnelList {
     list-style: none;
     padding: 0;
-    margin: 20px 0 0 0; /* Add top margin */
+    margin: 20px 0 0 0;
+    /* Add top margin */
 }
 
 .funnelItem {
     display: flex;
-    justify-content: space-between; /* Aligns labels to the left and values to the right */
+    justify-content: space-between;
+    /* Aligns labels to the left and values to the right */
     align-items: center;
     padding: 12px 0;
-    border-bottom: 1px solid #f0f0f0; /* Light gray divider */
+    border-bottom: 1px solid #f0f0f0;
+    /* Light gray divider */
     font-size: 14px;
     color: #333;
 }
 
 .funnelItem:last-child {
-    border-bottom: none; /* No border for the last item */
+    border-bottom: none;
+    /* No border for the last item */
 }
 
 .funnelLabel {
@@ -395,13 +401,15 @@
     height: 8px;
     border-radius: 50%;
     margin-right: 10px;
-    background-color: #4251f0; /* This color is used for all dots as per the provided code */
+    background-color: #4251f0;
+    /* This color is used for all dots as per the provided code */
 }
 
 .funnelValues {
     display: flex;
     align-items: center;
-    gap: 10px; /* Space between value and percentage */
+    gap: 10px;
+    /* Space between value and percentage */
 }
 
 .funnelValue {
@@ -416,7 +424,8 @@
 /* --- Overall Conversion Rate Card --- */
 
 .conversionRateCard {
-    flex: 1; /* Takes up remaining space */
+    flex: 1;
+    /* Takes up remaining space */
     background-color: #ffffff;
     border-radius: 8px;
     padding: 20px;
@@ -432,7 +441,8 @@
 .conversionRateValue {
     font-size: 48px;
     font-weight: bold;
-    color: #5a72ee; /* Blue color for the main value */
+    color: #5a72ee;
+    /* Blue color for the main value */
     margin: 0;
 }
 
@@ -447,11 +457,13 @@
 .conversionRateChange {
     font-size: 14px;
     font-weight: 500;
-    color: #888; /* Default color for change text */
+    color: #888;
+    /* Default color for change text */
 }
 
 .positiveChange {
-    color: #28a745; /* Green color for positive change */
+    color: #28a745;
+    /* Green color for positive change */
     font-weight: 600;
 }
 
@@ -464,142 +476,152 @@
 
 /* --- Mobile (0px - 768px) --- */
 @media (max-width: 768px) {
-  .analyticsPage {
-    padding: 1rem;
-    gap: 1rem;
-  }
+    .analyticsPage {
+        padding: 1rem;
+        gap: 1rem;
+    }
 
-  .analyticsTitle {
-    font-size: 1.5rem;
-  }
+    .analyticsTitle {
+        font-size: 1.5rem;
+    }
 
-  .analyticsSubtitle {
-    font-size: 0.875rem;
-  }
+    .analyticsSubtitle {
+        font-size: 0.875rem;
+    }
 
-  /* Metrics Grid */
-  .metricsGrid {
-    grid-template-columns: 1fr;
-  }
+    /* Metrics Grid */
+    .metricsGrid {
+        grid-template-columns: 1fr;
+    }
 
-  /* Tabbed Navigation */
-  .tabsContainer {
-    gap: 20px;
-    overflow-x: auto; /* Enable horizontal scrolling */
-    white-space: nowrap; /* Prevent tabs from wrapping */
-  }
+    /* Tabbed Navigation */
+    .tabsContainer {
+        gap: 20px;
+        overflow-x: auto;
+        white-space: nowrap;
+      
+    }
 
-  .tabButton {
-    padding: 0.5rem 1rem;
-    font-size: 0.875rem;
-  }
+    .tabButton {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
 
-  /* Charts */
-  .chartsContainer {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
+    /* Charts */
+    .chartsContainer {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
 
-  /* Conversion Funnel */
-  .conversionContainer {
-    grid-template-columns: 1fr;
-  }
+    /* Conversion Funnel */
+    .conversionContainer {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* --- Tablet (769px - 1199px) --- */
 @media (min-width: 769px) and (max-width: 1199px) {
-  .analyticsPage {
-    padding: 1.5rem;
-  }
+    .analyticsPage {
+        padding: 1.5rem;
+    }
 
-  /* Metrics Grid */
-  .metricsGrid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+    /* Metrics Grid */
+    .metricsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
-  /* Tabbed Navigation */
-  .tabsContainer {
-    gap: 40px;
-  }
+    /* Tabbed Navigation */
+    .tabsContainer {
+        gap: 40px;
+    }
 
-  /* Charts */
-  .chartsContainer {
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 1.5rem;
-  }
+    /* Charts */
+    .chartsContainer {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 1.5rem;
+    }
 
-  /* Conversion Funnel */
-  .conversionContainer {
-    grid-template-columns: 1.5fr 1fr; /* Adjusting proportions */
-    gap: 1.5rem;
-  }
+    /* Conversion Funnel */
+    .conversionContainer {
+        grid-template-columns: 1.5fr 1fr;
+        /* Adjusting proportions */
+        gap: 1.5rem;
+    }
 }
 
 
 /* fOR JUST THE LAST PART OF analytic */
 
 @media (max-width: 768px) {
-  /* Chart and card container adjustments */
-  .chartCard,
-  .conversionFunnel,
-  .conversionRateCard {
-    padding: 15px; /* Reduce padding for smaller screens */
-    margin-bottom: 15px;
-    min-width: unset; /* Allow cards to shrink below 300px */
-  }
 
-  /* Chart headers */
-  .chartTitle {
-    font-size: 16px; /* Slightly smaller font size */
-  }
+    /* Chart and card container adjustments */
+    .chartCard,
+    .conversionFunnel,
+    .conversionRateCard {
+        padding: 15px;
+        /* Reduce padding for smaller screens */
+        margin-bottom: 15px;
+        min-width: unset;
+        /* Allow cards to shrink below 300px */
+    }
 
-  .chartSubtitle {
-    font-size: 12px;
-  }
+    /* Chart headers */
+    .chartTitle {
+        font-size: 16px;
+        /* Slightly smaller font size */
+    }
 
-  /* Conversion funnel container */
-  .conversionContainer {
-    flex-direction: column; /* Stack the two main components */
-    gap: 15px;
-  }
+    .chartSubtitle {
+        font-size: 12px;
+    }
 
-  /* Funnel list items */
-  .funnelItem {
-  
-    padding: 10px 0;
-    font-size: 13px;
-      display: flex;
-    align-items: center;
-  }
+    /* Conversion funnel container */
+    .conversionContainer {
+        flex-direction: column;
+        /* Stack the two main components */
+        gap: 15px;
+    }
 
-  .funnelLabel {
-    margin-bottom: 5px; /* Add space between label and values */
-  
-  }
+    /* Funnel list items */
+    .funnelItem {
 
-  .funnelValues {
-    align-self: flex-end; /* Push values to the right */
-    gap: 5px;
-  }
+        padding: 10px 0;
+        font-size: 13px;
+        display: flex;
+        align-items: center;
+    }
 
-  .funnelValue {
-    font-size: 14px;
-  }
+    .funnelLabel {
+        margin-bottom: 5px;
+        /* Add space between label and values */
 
-  .funnelPercentage {
-    font-size: 11px;
-  }
+    }
 
-  /* Conversion rate card */
-  .conversionRateCard {
-    padding: 20px;
-  }
+    .funnelValues {
+        align-self: flex-end;
+        /* Push values to the right */
+        gap: 5px;
+    }
 
-  .conversionRateValue {
-    font-size: 40px; /* Reduce the large value's font size */
-  }
+    .funnelValue {
+        font-size: 14px;
+    }
 
-  .conversionRateLabel {
-    font-size: 14px;
-  }
+    .funnelPercentage {
+        font-size: 11px;
+    }
+
+    /* Conversion rate card */
+    .conversionRateCard {
+        padding: 20px;
+    }
+
+    .conversionRateValue {
+        font-size: 40px;
+        /* Reduce the large value's font size */
+    }
+
+    .conversionRateLabel {
+        font-size: 14px;
+    }
 }

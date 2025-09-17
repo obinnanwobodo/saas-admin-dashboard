@@ -82,7 +82,7 @@ const initialUsers = [
   },
 ];
 
-const Users = ({ isSidebarCollapsed }) => { 
+const Users = ({ isSidebarCollapsed }) => {
   const [users, setUsers] = useState(initialUsers);
 
   const handleAddUser = () => {
@@ -100,7 +100,7 @@ const Users = ({ isSidebarCollapsed }) => {
   };
 
   return (
-            <div className={`${styles.usersgen} ${isSidebarCollapsed ? styles.usersExpanded : ''}`}>
+    <div className={`${styles.usersgen} ${isSidebarCollapsed ? styles.usersExpanded : ''}`}>
 
       <div className={styles.fitstpart}>
         <h2 className={styles.umanage}>User Management</h2>
