@@ -17,7 +17,7 @@ import profile from '../../../public/Gemini_Generated_Image_eu7k7feu7k7feu7k.png
 import styles from './Navbar.module.css'
 
 const Navbar = () => {
-    const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(true);
+    const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(true); // Changed to false by default
     const [activeMenu, setActiveMenu] = useState("Dashboard");
     const [isNotificationsOpen, setIsNotificationsOpen] = useState(false);
     const [isProfileOpen, setIsProfileOpen] = useState(false);
@@ -38,6 +38,14 @@ const Navbar = () => {
             if (!prev) setIsNotificationsOpen(false);
             return !prev;
         });
+    };
+
+    // New handler to close sidebar on main content click
+    const handleMainContentClick = () => {
+        // Only close sidebar on mobile if it's open
+        if (window.innerWidth <= 768 && !isSidebarCollapsed) {
+            setIsSidebarCollapsed(true);
+        }
     };
 
     const renderContent = () => {
@@ -63,6 +71,11 @@ const Navbar = () => {
         <div className={`${styles.navgen} ${isSidebarCollapsed ? styles.collapsed : ''}`}>
             {/* Sidebar */}
             <div className={`${styles.menuside}`}>
+                {/* Desktop Toggle Icon */}
+                <div onClick={handleSidebarToggle} className={`${styles.sidebaricn} ${styles.desktopToggle}`}>
+                    <BsLayoutSidebar />
+                </div>
+                
                 <div className={`${styles.menuicnndtext}`}>
                     <div className={`${styles.trendicn}`}><IoMdTrendingUp /></div>
                     <div className={`${styles.hndp}`}>
@@ -95,12 +108,13 @@ const Navbar = () => {
             </div>
 
             {/* Top Navigation and Main Content */}
-            <div className={`${styles.topnavndcontent} ${isSidebarCollapsed ? styles.expanded : ''}`}>
+            <div className={`${styles.topnavndcontent} ${isSidebarCollapsed ? styles.expanded : ''}`} onClick={handleMainContentClick}>
                 <div className={`${styles.topnavside}`}>
-                    <div onClick={handleSidebarToggle} className={styles.sidebaricn}>
+                    {/* Mobile Toggle Icon */}
+                    <div onClick={handleSidebarToggle} className={`${styles.sidebaricn} ${styles.mobileToggle}`}>
                         <BsLayoutSidebar />
                     </div>
-
+                    
                     <div className={`${styles.searchgen}`}>
                         <div>
                             <FiSearch />
@@ -139,7 +153,6 @@ const Navbar = () => {
                             className={styles.prof}
                             src={profile}
                             alt='profile_pic'
-                        
                         />
                         {isProfileOpen && (
                             <div className={styles.profileDropdown}>
@@ -171,4 +184,4 @@ const Navbar = () => {
     );
 };
 
-export default Navbar;       
+export default Navbar;

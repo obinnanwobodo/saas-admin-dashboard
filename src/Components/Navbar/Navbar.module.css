@@ -520,8 +520,17 @@ padding: 1px;
     color: #0c0e11; /* Change color for better visibility */
   }
 
-  .searchgen, .profilesection {
-    display: none; /* Hide search bar and profile section to save space */
+  .searchgen{
+    display: flex;
+    width: 200px; 
+  }
+
+  .searchgen input{
+    width: 100%;
+  }
+
+  .profilesection{
+    display: flex; 
   }
   
   /* Notifications Dropdown for Mobile */
@@ -532,8 +541,17 @@ padding: 1px;
   
   .notificationDropdown {
       right: 10px;
-      width: 95vw; /* Make it almost full screen width on mobile */
-      max-width: 300px;
+    
+    
+  }
+
+  .profileDropdown{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+   margin-left: 150px;
+    left: 0;
+    width: 55%;
   }
 
   /* Sidebar for Mobile */
@@ -586,5 +604,11 @@ padding: 1px;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.4);
     z-index: 1500;
+  }
+  .sidebaricn{
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 10px;
+    
   }
 }
