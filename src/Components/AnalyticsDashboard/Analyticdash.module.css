@@ -534,3 +534,70 @@
     gap: 1.5rem;
   }
 }
+
+
+/* fOR JUST THE LAST PART OF analytic */
+
+@media (max-width: 768px) {
+  /* Chart and card container adjustments */
+  .chartCard,
+  .conversionFunnel,
+  .conversionRateCard {
+    padding: 15px; /* Reduce padding for smaller screens */
+    margin-bottom: 15px;
+    min-width: unset; /* Allow cards to shrink below 300px */
+  }
+
+  /* Chart headers */
+  .chartTitle {
+    font-size: 16px; /* Slightly smaller font size */
+  }
+
+  .chartSubtitle {
+    font-size: 12px;
+  }
+
+  /* Conversion funnel container */
+  .conversionContainer {
+    flex-direction: column; /* Stack the two main components */
+    gap: 15px;
+  }
+
+  /* Funnel list items */
+  .funnelItem {
+    flex-direction: column; /* Stack label and values vertically */
+    align-items: flex-start;
+    padding: 10px 0;
+    font-size: 13px;
+  }
+
+  .funnelLabel {
+    margin-bottom: 5px; /* Add space between label and values */
+  }
+
+  .funnelValues {
+    align-self: flex-end; /* Push values to the right */
+    gap: 5px;
+  }
+
+  .funnelValue {
+    font-size: 14px;
+  }
+
+  .funnelPercentage {
+    font-size: 11px;
+  }
+
+  /* Conversion rate card */
+  .conversionRateCard {
+    padding: 20px;
+  }
+
+  .conversionRateValue {
+    font-size: 40px; /* Reduce the large value's font size */
+  }
+
+  .conversionRateLabel {
+    font-size: 14px;
+  }
+}
